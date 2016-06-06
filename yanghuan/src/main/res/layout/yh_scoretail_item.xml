@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/yh_scoretail_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="连续30天签到"
+        android:textSize="15sp"/>
+    <TextView
+        android:id="@+id/yh_scoretail_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/yh_scoretail_text1"
+        android:text="2015-3-1"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:id="@+id/yh_scoretail_text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/yh_scoretail_text2"
+        android:text="18:45"/>
+    <TextView
+        android:id="@+id/yh_scoretail_text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:text="+5"/>
+
+
+</RelativeLayout>

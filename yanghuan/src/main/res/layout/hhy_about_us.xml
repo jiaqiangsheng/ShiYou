@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/hhy_config_about_us"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/shaiXuan">
+        <ImageView
+            android:id="@+id/hhy_config_about_us_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关于我们"
+            android:textSize="20dp"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/hhy_aboutus_icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/icon_xiang"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/hhy_config_about_us"/>
+    <TextView
+        android:id="@+id/hhy_aboutus_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/hhy_aboutus_icon"
+        android:text="视友 for Android"
+        android:textSize="20dp"/>
+    <TextView
+        android:id="@+id/hhy_aboutus_edition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@id/hhy_aboutus_name"
+        android:layout_below="@id/hhy_aboutus_name"
+        android:text="Version 1.0"
+        android:textSize="20dp"/>
+    <Button
+        android:id="@+id/hhy_gengxin"
+        android:layout_below="@id/hhy_aboutus_edition"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="检查更新"/>
+
+
+</RelativeLayout>

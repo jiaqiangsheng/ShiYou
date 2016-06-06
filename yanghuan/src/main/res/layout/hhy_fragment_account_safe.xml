@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/hhy_background_gray"
+
+                tools:context="com.hhy.fragment.AccountSafeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:id="@+id/hhy_account_safe"
+        android:background="@color/shaiXuan"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/hhy_safe_back_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="隐私与安全"
+            android:layout_centerInParent="true"
+            android:textSize="20dp"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/hhy_safe_text"
+        android:paddingLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_below="@id/hhy_account_safe"
+        android:text="安全设置"/>
+
+    <RelativeLayout
+        android:id="@+id/hhy_safe_phone"
+        android:layout_below="@id/hhy_safe_text"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/hhy_white">
+
+        <TextView
+            android:paddingLeft="16dp"
+            android:id="@+id/hhy_accountsafe_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="绑定的手机号"
+            android:textSize="20dp"
+            android:layout_centerVertical="true"/>
+
+     <TextView
+         android:id="@+id/hhy_accountsafe_phone_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13140904662"
+            android:textSize="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerInParent="true"
+           android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/hhy_yinsi_shezhi"
+            android:paddingLeft="16dp"
+            android:layout_marginTop="40dp"
+            android:layout_below="@id/hhy_safe_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="隐私设置"
+            android:textSize="20dp"/>
+    <RelativeLayout
+        android:id="@+id/hhy_yinsi1"
+        android:paddingLeft="20dp"
+        android:layout_below="@id/hhy_yinsi_shezhi"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/hhy_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="屏蔽他(她)的动态"
+            android:textSize="20dp"
+            android:layout_centerVertical="true"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/right_icon"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/hhy_yinsi2"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/hhy_yinsi1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/hhy_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="屏蔽他(她)看到我的动态"
+            android:textSize="20dp"
+            android:layout_centerVertical="true"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/right_icon"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/hhy_heimingdan"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/hhy_yinsi2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/hhy_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="黑名单"
+            android:textSize="20dp"
+            android:layout_centerVertical="true"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/right_icon"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

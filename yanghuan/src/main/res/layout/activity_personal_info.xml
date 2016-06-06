@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hhy_gray"
+    android:id="@+id/hhy_personalinfo_relative"
+    tools:context="com.hhy.activity.PersonalInfoActivity">
+
+    <RelativeLayout
+        android:id="@+id/hhy_personalinfo_title_relative"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/shaiXuan">
+
+        <TextView
+            android:id="@+id/hhy_personal_cancleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:text="取消"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="个人信息"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/hhy_personal_title_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:text="完成"
+            android:textSize="20dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hhy_personalinfo_touxiang_relative"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/hhy_personalinfo_title_relative"
+        android:layout_marginTop="10dp"
+        android:background="@color/background_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="头像"
+            android:layout_marginLeft="8dp"
+            android:textSize="20dp"/>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/hhy_personal_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_xiang"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hhy_personalinfo_nicheng_relative"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/hhy_personalinfo_touxiang_relative"
+        android:layout_marginTop="10dp"
+        android:background="@color/background_white">
+
+        <TextView
+            android:id="@+id/hhy_personal_lefttext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="昵称"
+            android:layout_marginLeft="8dp"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/hhy_personal_nichengedit"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/hhy_personal_lefttext"
+            />
+        <TextView
+            android:id="@+id/hhy_personal_nichengtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="小明"
+            android:textSize="16sp"
+            android:layout_marginRight="8dp"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hhy_personalinfo_account_relative"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/hhy_personalinfo_nicheng_relative"
+        android:layout_marginTop="10dp"
+        android:background="@color/background_white">
+
+        <TextView
+            android:id="@+id/hhy_personal_accountname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="帐号"
+            android:layout_marginLeft="8dp"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="131221wert"
+            android:layout_marginRight="8dp"
+            android:textSize="20sp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hhy_personalinfo_sex_relative"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/hhy_personalinfo_account_relative"
+        android:layout_marginTop="10dp"
+        android:background="@color/background_white">
+
+        <TextView
+            android:id="@+id/hhy_personal_sexname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="性别"
+            android:layout_marginLeft="8dp"
+            android:textSize="20dp"/>
+
+        <RadioGroup
+            android:id="@+id/hhy_personal_sex_radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/hhy_personal_sexname"
+            android:orientation="horizontal"
+            >
+
+            <RadioButton
+                android:id="@+id/hhy_personal_sex_radiomale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="男"
+                android:textSize="18sp"
+                />
+
+            <RadioButton
+                android:id="@+id/hhy_personal_sex_radiofemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="女"
+                android:textSize="18sp"
+                />
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hhy_personal_star_relative"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/hhy_personalinfo_sex_relative"
+        android:layout_marginTop="10dp"
+        android:background="@color/background_white"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="星座"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/hhy_personal_buxian_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/hhy_personal_buxian_zhankaiimage"
+            android:text="不限"
+            android:textColor="@color/black"
+            android:textSize="20dp"/>
+
+        <ImageView
+            android:id="@+id/hhy_personal_buxian_zhankaiimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="false"
+            android:src="@drawable/expander_close"
+            />
+
+    </RelativeLayout>
+
+    <!--起初处于隐藏状态-->
+    <RelativeLayout
+        android:id="@+id/hhy_personal_star_zhankai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hhy_personal_star_relative"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        >
+
+        <Button
+            android:id="@+id/hhy_personal_star_roundButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_roundbutton"
+            android:text="金牛座"
+            />
+
+        <Button
+            android:id="@+id/hhy_personal_star_roundButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/hhy_personal_star_roundButton1"
+            android:background="@drawable/shape_roundbutton"
+            android:text="白羊座"
+            />
+
+        <Button
+            android:id="@+id/hhy_personal_star_roundButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/hhy_personal_star_roundButton2"
+            android:background="@drawable/shape_roundbutton"
+            android:text="双子座"
+            />
+
+        <Button
+            android:id="@+id/hhy_personal_star_roundButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/hhy_personal_star_roundButton3"
+            android:background="@drawable/shape_roundbutton"
+            android:text="巨蟹座"
+            />
+
+
+        <Button
+            android:id="@+id/hhy_personal_star_roundButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hhy_personal_star_roundButton4"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_roundbutton"
+            android:text="狮子座"
+            />
+
+        <Button
+            android:id="@+id/hhy_personal_star_roundButton6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hhy_personal_star_roundButton2"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/hhy_personal_star_roundButton5"
+            android:background="@drawable/shape_roundbutton"
+            android:text="处女座"
+            />
+
+        <Button
+            android:id="@+id/hhy_personal_star_roundButton7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hhy_personal_star_roundButton3"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/hhy_personal_star_roundButton6"
+            android:background="@drawable/shape_roundbutton"
+            android:text="天秤座"
+            />
+
+        <Button
+            android:id="@+id/hhy_personal_star_roundButton8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hhy_personal_star_roundButton4"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/hhy_personal_star_roundButton7"
+            android:background="@drawable/shape_roundbutton"
+            android:text="天蝎座"
+            />
+
+        <Button
+            android:id="@+id/hhy_personal_star_roundButton9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hhy_personal_star_roundButton5"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_roundbutton"
+            android:text="射手座"
+            />
+
+        <Button
+            android:id="@+id/hhy_personal_star_roundButton10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hhy_personal_star_roundButton6"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/hhy_personal_star_roundButton9"
+            android:background="@drawable/shape_roundbutton"
+            android:text="魔蝎座"
+            />
+
+        <Button
+            android:id="@+id/hhy_personal_star_roundButton11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hhy_personal_star_roundButton7"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/hhy_personal_star_roundButton10"
+            android:background="@drawable/shape_roundbutton"
+            android:text="水瓶座"
+            />
+
+        <Button
+            android:id="@+id/hhy_personal_star_roundButton12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hhy_personal_star_roundButton8"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/hhy_personal_star_roundButton11"
+            android:background="@drawable/shape_roundbutton"
+            android:text="双鱼座"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hhy_personal_qianming_relative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/hhy_personal_star_zhankai"
+        android:background="@color/background_white">
+        >
+
+        <TextView
+            android:id="@+id/hhy_personal_nametext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个性签名"
+            android:layout_marginLeft="8dp"
+            android:textSize="20dp"
+            />
+
+        <EditText
+            android:id="@+id/hhy_personal_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/hhy_personal_nametext"
+            android:background="@drawable/editbox_background_normal"
+            android:gravity="top"
+            android:hint="潇洒的签名能增加你的风采"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

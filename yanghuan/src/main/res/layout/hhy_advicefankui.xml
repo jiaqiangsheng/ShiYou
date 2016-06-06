@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/hhy_advice_fasong_title"
+        android:background="@color/shaiXuan"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+       <TextView
+           android:id="@+id/hhy_cancle"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="取消"
+           android:textSize="20sp"
+           android:layout_marginLeft="15dp"
+           android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="意见反馈"
+            android:layout_centerInParent="true"
+            android:textSize="20dp"/>
+        <Button
+            android:id="@+id/hhy_advice_fasong"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="发送"
+            android:enabled="false"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/hhy_advice"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/hhy_white"
+        android:layout_below="@id/hhy_advice_fasong_title">
+        <EditText
+            android:id="@+id/hhy_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top|left"
+            android:hint="请在这里写下您的反馈信息，我们一定在您的关注下变得更好(300百字以内)"/>
+
+     </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/icon_xiang"
+            android:id="@+id/head_portrait"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/username"/>
+
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="账号"
+            android:id="@+id/username"
+            android:selectAllOnFocus="true"
+            android:layout_above="@+id/password"
+            android:layout_alignLeft="@+id/password"
+           android:singleLine="true"/>
+
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="密码"
+            android:selectAllOnFocus="true"
+            android:id="@+id/password"
+            android:password="true"
+            android:layout_centerInParent="true"
+            android:singleLine="true"/>
+
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="记住密码"
+                    android:id="@+id/CheckButton"
+                    android:layout_below="@+id/password"
+                    android:layout_alignLeft="@+id/password"
+                    android:checked="true"
+                    />
+            <ImageButton
+                android:id="@+id/qqListIndicator"
+                android:layout_width="22dip"
+                android:layout_height="20dip"
+                android:layout_marginBottom="8dip"
+                android:layout_marginRight="3dip"
+                android:layout_alignBottom="@+id/username"
+                android:layout_alignRight="@+id/username"
+                android:background="@drawable/indicator_down" />
+            <ImageButton
+                android:id="@+id/delete_button_edit"
+                android:layout_width="13dip"
+                android:layout_height="13dip"
+                android:layout_marginBottom="10dip"
+                android:layout_marginRight="3dip"
+                android:layout_alignBottom="@+id/username"
+                android:layout_toLeftOf="@id/qqListIndicator"
+                android:background="@drawable/deletebutton"
+                android:visibility="gone"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="忘记密码"
+                    android:layout_below="@+id/password"
+                    android:layout_alignRight="@+id/password"
+                    android:paddingTop="10dp"
+                    android:id="@+id/forget"
+                    />
+
+    <ListView
+        android:id="@+id/loginQQList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/username"
+        android:layout_alignRight="@id/username"
+        android:layout_below="@id/username"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="gone"
+        android:divider="#aaaaaa"
+        android:dividerHeight="0px"/>
+
+        <Button
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="登陆"
+            android:id="@+id/Login"
+            android:layout_below="@+id/CheckButton"
+            android:layout_alignLeft="@+id/CheckButton"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:onClick="lxx_login"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册"
+            android:id="@+id/zhuce"
+            android:layout_below="@+id/forget"
+            android:layout_alignRight="@+id/forget"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="15dp"
+            android:onClick="lxx_zhuce"
+          />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_qq"
+            android:src="@drawable/img_qq"
+           android:layout_below="@+id/Login"
+            android:layout_alignLeft="@+id/password"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QQ登录"
+            android:id="@+id/QQlogin"
+            android:layout_toRightOf="@+id/img_qq"
+            android:layout_alignTop="@+id/img_qq"
+            android:layout_marginTop="10dp"
+            />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_sina"
+        android:src="@drawable/img_sina"
+        android:layout_toLeftOf="@+id/sinalogin"
+        android:layout_alignTop="@+id/img_qq"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="新浪微博"
+
+        android:id="@+id/sinalogin"
+        android:layout_below="@+id/zhuce"
+        android:layout_alignRight="@+id/password"
+        android:layout_marginTop="10dp"
+        />
+
+
+
+</RelativeLayout>

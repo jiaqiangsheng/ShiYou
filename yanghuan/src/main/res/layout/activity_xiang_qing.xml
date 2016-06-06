@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yanghuan.MyApplication.XiangQingActivity">
+    <RelativeLayout
+        android:id="@+id/activity_linear"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/textUp">
+        <ImageView
+            android:id="@+id/activity_xiaqing_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/yh_back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="节目详情"
+            android:layout_centerInParent="true"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:textColor="@color/bottomColor1"/>
+    </RelativeLayout>
+    <ScrollView
+        android:layout_below="@id/activity_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/activity_xiangqing_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@mipmap/a4"/>
+        <TextView
+            android:id="@+id/activity_xiangqing_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="
+基本信息中文名：太阳的后裔英文名：
+태양의 후예，Descendants of the sun主要演员：
+宋仲基，宋慧乔，晋久，金智媛导演：李应福编剧：
+金恩淑，金元锡类别：爱情，战争全部集数：16集每集长度：
+基本信息中文名：太阳的后裔英文名：
+태양의 후예，Descendants of the sun主要演员：
+宋仲基，宋慧乔，晋久，金智媛导演：李应福编剧：
+金恩淑，金元锡类别：爱情，战争全部集数：16集每集长度：60分钟首播时间：2016年2月24日播出平台
+基本信息中文名：太阳的后裔英文名：
+태양의 후예，Descendants of the sun主要演员：
+宋仲基，宋慧乔，晋久，金智媛导演：李应福编剧：
+金恩淑，金元锡类别：爱情，战争全部集数：16集每集长度：60分钟首播时间：2016年2月24日播出平台
+基本信息中文名：太阳的后裔英文名：
+태양의 후예，Descendants of the sun主要演员：
+宋仲基，宋慧乔，晋久，金智媛导演：李应福编剧：
+金恩淑，金元锡类别：爱情，战争全部集数：16集每集长度：
+基本信息中文名：太阳的后裔英文名：
+태양의 후예，Descendants of the sun主要演员：
+宋仲基，宋慧乔，晋久，金智媛导演：李应福编剧：
+金恩淑，金元锡类别：爱情，战争全部集数：16集每集长度：60分钟首播时间：2016年2月24日播出平台
+基本信息中文名：太阳的后裔英文名：
+태양의 후예，Descendants of the sun主要演员：
+宋仲基，宋慧乔，晋久，金智媛导演：李应福编剧：
+金恩淑，金元锡类别：爱情，战争全部集数：16集每集长度：60分钟首播时间：2016年2月24日播出平台
+基本信息中文名：太阳的后裔英文名：
+태양의 후예，Descendants of the sun主要演员：
+宋仲基，宋慧乔，晋久，金智媛导演：李应福编剧：
+金恩淑，金元锡类别：爱情，战争全部集数：16集每集长度：60分钟首播时间：2016年2月24日播出平台
+60分钟首播时间：2016年2月24日播出平台60分钟首播时间：2016年2月24日播出平台：韩国KBS2、爱奇艺、香港ViuTV出品公司：NEW，Barunson发行公司：韩国KBS电视台发行语言：韩语拍摄地点：韩国江原道、首尔 希腊扎金索斯州
+"
+            />
+            </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

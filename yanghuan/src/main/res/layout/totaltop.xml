@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+    <com.yanghuan.Beans.TopImageViewDemo
+        android:id="@+id/totaltop_recom_image"
+        android:layout_marginLeft="20dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/c"/>
+
+    <TextView
+        android:id="@+id/totaltop_recom_text"
+        android:layout_toRightOf="@id/totaltop_recom_image"
+        android:layout_marginLeft="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="酷宝宝的传说"
+        android:textSize="18sp"/>
+
+    <ImageView
+        android:id="@+id/recom_image_seek"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_width="35dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/seek"/>
+
+</RelativeLayout>

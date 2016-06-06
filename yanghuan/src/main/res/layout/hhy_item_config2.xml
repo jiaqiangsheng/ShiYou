@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+·
+        <TextView
+            android:id="@+id/config_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="推送消息"
+            android:textSize="18dp"
+            android:textColor="#333333"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="8dp"
+            />
+        <TextView
+            android:id="@+id/bottom_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="不接收会错过精彩内容哦"
+            android:layout_below="@+id/config_textview"
+            android:textSize="15dp"
+            android:textColor="#333333"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="15dp"
+
+            />
+
+        <ImageView
+            android:id="@+id/hhy_right_image"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/butn_close"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

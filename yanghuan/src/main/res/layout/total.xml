@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <RadioGroup
+        android:id="@+id/tatal_group"
+        style="@style/mw"
+        android:paddingTop="8dp"
+        android:paddingBottom="13dp"
+        android:background="@color/bottomColor"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/total_recommend"
+            style="@style/radio"
+            android:drawableTop="@drawable/recommend"
+            android:checked="true"
+            android:text="推荐"/>
+        <RadioButton
+            android:id="@+id/total_chated"
+            style="@style/radio"
+            android:button="@null"
+            android:drawableTop="@drawable/chated"
+            android:text="聊天室"/>
+        <RadioButton
+            android:id="@+id/total_center"
+            style="@style/radioCenter"
+            android:button="@null"
+            android:drawableTop="@mipmap/tabbar_compose_background_icon_add"
+            />
+        <RadioButton
+            android:id="@+id/total_read"
+            style="@style/radio"
+            android:drawableTop="@drawable/read"
+            android:text="论坛"/>
+        <RadioButton
+            android:id="@+id/total_book"
+            style="@style/radio"
+            android:drawableTop="@drawable/book"
+            android:text="原著"/>
+
+    </RadioGroup>
+
+
+</merge>

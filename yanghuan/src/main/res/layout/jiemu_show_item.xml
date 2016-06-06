@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.yanghuan.Beans.RoundedImageView
+        android:id="@+id/jiemu_show_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerVertical="true"
+        app:oval="true"
+        android:scaleType="fitXY"
+        app:corner_radius="0dip"
+        app:border_width="1dp"
+        app:border_color="#50c0e9"
+        app:mutate_background="true"
+        android:src="@mipmap/a4"/>
+    <TextView
+        android:id="@+id/jiemu_show_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/jiemu_show_image"
+        android:layout_marginLeft="30dp"
+        android:text="heeo"
+        android:layout_marginTop="30dp"
+        android:textSize="15sp"
+
+        />
+    <TextView
+        android:id="@+id/jiemu_show_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_below="@id/jiemu_show_text1"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/jiemu_show_image"
+        android:text="heeo"
+        android:layout_marginTop="30dp"
+        android:textSize="15sp"
+        />
+
+</RelativeLayout>

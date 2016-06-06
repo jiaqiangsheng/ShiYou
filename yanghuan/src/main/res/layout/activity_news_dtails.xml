@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:paddingTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="标题"
+            android:textSize="16dp"
+            android:id="@+id/dtailstitle"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="内容"
+            android:id="@+id/dtailscontex"
+            android:paddingTop="5dp"
+            android:paddingLeft="15dp"
+            android:textSize="14dp"
+            android:layout_below="@+id/dtailsimageView"
+            android:layout_alignRight="@+id/dtailstitle"
+            android:layout_alignEnd="@+id/dtailstitle" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dtailsimageView"
+            android:src="@drawable/aio_image_default_round"
+            android:paddingTop="10dp"
+            android:layout_below="@+id/dtailstitle"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="时间"
+            android:id="@+id/dtailsdate"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+
+            android:layout_below="@+id/dtailscontex"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="20dp"
+             />
+
+
+    </RelativeLayout>
+
+</ScrollView>

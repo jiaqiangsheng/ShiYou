@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/zhuiju_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/a1"/>
+    <TextView
+        android:id="@+id/zhuju_text1"
+        android:layout_toRightOf="@id/zhuiju_image"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="欢乐喜剧人"/>
+    <TextView
+        android:id="@+id/zhuiju_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="更新至11集"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="3dp"
+        android:textSize="15sp"
+        android:layout_toRightOf="@id/zhuiju_image"
+        android:layout_below="@id/zhuju_text1"
+        />
+    <TextView
+        android:id="@+id/zhuiju_text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="每周六播出"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/zhuiju_image"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/zhuiju_text2"/>
+    <Spinner
+        android:id="@+id/zhuiju_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/zhuju_text1"
+        android:layout_marginLeft="20dp"
+        android:layout_centerInParent="true"
+       android:entries="@array/week">
+     </Spinner>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/clock"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"/>
+
+
+</RelativeLayout>

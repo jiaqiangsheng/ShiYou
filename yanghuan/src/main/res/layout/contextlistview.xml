@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.gemptc.example.ninegrid.MainActivity"
+    android:descendantFocusability="blocksDescendants">
+<ImageView
+    android:layout_width="45dp"
+    android:layout_height="45dp"
+    android:id="@+id/Lxx_contextimageView"
+    android:src="@drawable/kzy"
+    android:scaleType="fitXY"
+    android:paddingLeft="10dp"
+    android:paddingTop="15dp"
+    android:layout_alignParentTop="true" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:layout_toRightOf="@+id/Lxx_contextimageView"
+    android:text="用户昵称"
+    android:textStyle="bold"
+    android:id="@+id/lxx_nicheng"
+    android:layout_alignTop="@+id/Lxx_contextimageView"
+    android:paddingTop="10dp"
+    android:textSize="15dp"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="说说说说说说说说说说说说"
+    android:layout_toRightOf="@+id/Lxx_contextimageView"
+    android:id="@+id/Lxx_contextText"
+    android:layout_below="@+id/Lxx_contextimageView"
+
+    />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="时间"
+    android:id="@+id/Lxx_dataContext"
+    android:layout_below="@+id/lxx_nicheng"
+    android:layout_toRightOf="@+id/Lxx_contextimageView"
+    android:layout_toEndOf="@+id/Lxx_contextimageView" />
+
+    <com.lxx.myview.MyGridView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lXX_gridView"
+        android:layout_below="@+id/Lxx_contextText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:columnWidth="50dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="5dp"
+        android:numColumns="3"
+
+       />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lXX_gridView"
+        android:layout_alignLeft="@+id/lXX_gridView"
+        android:id="@+id/re"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="10dp"
+        >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/frl"
+            android:id="@+id/imageView"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="转发"
+            android:paddingTop="3dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="20dp"
+            android:layout_toRightOf="@+id/imageView"
+            android:id="@+id/zhuanfa"
+            />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/aio_face_tab_line_press_pre"
+            android:layout_toRightOf="@+id/zhuanfa"
+            />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/frq"
+            android:id="@+id/lxx_pinglun"
+            android:layout_centerHorizontal="true"
+            android:onClick="pinglunfoucs"/>
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="1"
+            android:layout_toRightOf="@+id/lxx_pinglun"
+            android:id="@+id/pingluncount"
+            android:paddingTop="7dp"
+            android:paddingLeft="3dp"
+            />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/aio_face_tab_line_press_pre"
+            android:layout_toRightOf="@+id/pingluncount"
+            />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/fqy"
+            android:id="@+id/lxx_zan"
+
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/zancount"
+            android:layout_toStartOf="@+id/zancount" />
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="0"
+            android:id="@+id/zancount"
+            android:paddingTop="7dp"
+            android:paddingLeft="3dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

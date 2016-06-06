@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/hhy_white"
+               >
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/hhy_fresco1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        fresco:placeholderImage="@drawable/ic_media_video_poster"
+        fresco:placeholderImageScaleType="focusCrop"
+        fresco:roundAsCircle="true"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:id="@+id/hhy_name1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/hhy_fresco1"
+        android:layout_centerVertical="true"
+        android:text="漩涡鸣人"
+        android:textSize="20dp"/>
+
+
+    <ImageView
+        android:id="@+id/hhy_dagou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="60dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/hhy_icon_dagou"/>
+    <ImageView
+        android:id="@+id/hhy_delete"
+        android:layout_width="33dp"
+        android:layout_height="40dp"
+       android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/hhy_delete"/>
+</RelativeLayout>

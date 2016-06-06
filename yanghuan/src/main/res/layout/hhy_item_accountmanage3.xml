@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/hhy_manage_exit_relative"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:background="@color/background_white"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/hhy_exit_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="退出当前账号"
+            android:textSize="20dp"
+            android:textColor="@color/hhy_red"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

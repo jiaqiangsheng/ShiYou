@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/favorite_item_textview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3月24号"
+            android:textSize="20sp"/>
+
+        <com.yanghuan.Beans.RoundedImageView
+           android:id="@+id/favorite_item_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:corner_radius="20dip"
+            app:border_width="1dp"
+            app:border_color="#50c0e9"
+            app:mutate_background="true"
+            app:oval="false"
+            android:layout_below="@id/favorite_item_textview1"
+            android:src="@drawable/c"/>
+        <TextView
+            android:id="@+id/favorite_item_textview2"
+        android:layout_alignParentRight="true"
+            android:layout_marginRight="80dp"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="东方聊天"
+            />
+
+    </RelativeLayout>
+
+
+
+

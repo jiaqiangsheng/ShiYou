@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyApplication.WeiShiActivity">
+   <LinearLayout
+       android:id="@+id/activity_linear"
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       android:background="@color/background_white">
+       <ImageView
+           android:id="@+id/activity_dian_back"
+           android:layout_width="40dp"
+           android:layout_height="40dp"
+           android:layout_gravity="center"
+           android:src="@mipmap/back"
+           android:background="@color/aquamarine"/>
+   </LinearLayout>
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/activity_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="false"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrDrawable="@drawable/default_ptr_flip"
+        android:layout_below="@id/activity_linear">
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+</RelativeLayout>
