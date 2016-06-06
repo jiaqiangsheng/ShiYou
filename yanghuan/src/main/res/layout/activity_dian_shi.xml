@@ -9,14 +9,14 @@
        android:id="@+id/activity_linear"
        android:layout_width="match_parent"
        android:layout_height="50dp"
-       android:background="@color/background_white">
+       android:background="@color/aquamarine">
        <ImageView
            android:id="@+id/activity_dian_back"
            android:layout_width="40dp"
            android:layout_height="40dp"
            android:layout_gravity="center"
            android:src="@mipmap/back"
-           android:background="@color/aquamarine"/>
+          />
    </LinearLayout>
     <com.handmark.pulltorefresh.library.PullToRefreshListView
         android:id="@+id/activity_listview"

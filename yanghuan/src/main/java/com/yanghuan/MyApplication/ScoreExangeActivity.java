@@ -59,7 +59,8 @@ public class ScoreExangeActivity extends AppCompatActivity implements View.OnCli
         int id=v.getId();
         switch (id){
             case R.id.score_exange_bt1:
-                Toast.makeText(this,"1",Toast.LENGTH_LONG).show();
+               Intent intent=new Intent(ScoreExangeActivity.this,ScoreDetailActivity.class);
+                startActivity(intent);
                 break;
             case R.id.score_exange_bt2:
                 Toast.makeText(this,"2",Toast.LENGTH_LONG).show();

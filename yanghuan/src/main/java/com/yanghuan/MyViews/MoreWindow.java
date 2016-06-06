@@ -142,9 +142,9 @@ public class MoreWindow extends PopupWindow implements OnClickListener{
 		LayoutParams params =new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
 		params.bottomMargin = bottomMargin;
 		params.addRule(RelativeLayout.BELOW, R.id.more_window_auto);
-		params.addRule(RelativeLayout.RIGHT_OF, R.id.more_window_collect);
+		/*params.addRule(RelativeLayout.RIGHT_OF, R.id.more_window_collect);*/
 		params.topMargin = 200;
-		params.leftMargin = 18;
+		params.leftMargin = 200;
 		close.setLayoutParams(params);
 
 		
@@ -267,14 +267,15 @@ public class MoreWindow extends PopupWindow implements OnClickListener{
 		case R.id.more_window_delete:
 			Toast.makeText(mContext,"拍摄",Toast.LENGTH_SHORT).show();
 			break;
-		case R.id.more_window_collect:
+		/*case R.id.more_window_collect:
 			Toast.makeText(mContext,"签到",Toast.LENGTH_SHORT).show();
-			break;
+			break;*/
 		case R.id.more_window_auto:
 			Toast.makeText(mContext,"点评",Toast.LENGTH_SHORT).show();
 			break;
 		case R.id.more_window_external:
-			Toast.makeText(mContext,"文字",Toast.LENGTH_SHORT).show();
+			Intent intent1=new Intent(mContext,ScoreExangeActivity.class);
+			mContext.startActivity(intent1);
 			break;
 
 		default:
