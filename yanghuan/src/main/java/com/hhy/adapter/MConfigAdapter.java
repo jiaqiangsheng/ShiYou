@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hhy.bean.Config;
+import com.jqs.servert.utils.MyApplication;
 import com.yanghuan.R;
 
 import org.xutils.common.Callback;
@@ -34,13 +35,14 @@ public class MConfigAdapter extends BaseAdapter {
     ViewHolder3 holder3;
     boolean flag = false;
     public static final String TAG = "XUTILS";
-    String mPath;
+    String url;
 
     public MConfigAdapter(List<Config> mList, Context context) {
         this.mList = mList;
         mContext = context;
         mInflater = LayoutInflater.from(mContext);
-
+        MyApplication myApplication = (MyApplication) mContext.getApplicationContext();
+        url = myApplication.getUrlPath();
     }
 
     public static final int TYPE_COUNT = 3;
@@ -159,8 +161,7 @@ public class MConfigAdapter extends BaseAdapter {
         //POST请求
         //第一步：设置访问路径以及携带数据
         if(flag){
-            mPath = "http://10.201.1.148:8888/HttpServer/HttpServer";
-            RequestParams params = new RequestParams(mPath);
+            RequestParams params = new RequestParams(url);
             params.addQueryStringParameter("fla","1");//0：代表推送消息关闭，1：代表推送消息打开
             //第二步：开始请求，设置请求方式，同时实现回调函数
             x.http().get(params, new Callback.CommonCallback<String>() {

@@ -1,5 +1,9 @@
 [
     {
+        "merged": "G:\\Android-Project\\Shiyou\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\slidingmenumain.xml",
+        "source": "G:\\Android-Project\\Shiyou\\library\\build\\intermediates\\bundles\\debug\\res\\layout\\slidingmenumain.xml"
+    },
+    {
         "merged": "D:\\new\\aa\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\slidingmenumain.xml",
         "source": "D:\\new\\aa\\library\\build\\intermediates\\bundles\\debug\\res\\layout\\slidingmenumain.xml"
     }

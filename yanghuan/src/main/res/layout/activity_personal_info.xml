@@ -48,8 +48,8 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/hhy_personalinfo_title_relative"
-        android:layout_marginTop="10dp"
-        android:background="@color/background_white">
+        android:layout_marginTop="20dp"
+        android:background="@color/hhy_white">
 
         <TextView
             android:layout_width="wrap_content"
@@ -59,12 +59,12 @@
             android:layout_marginLeft="8dp"
             android:textSize="20dp"/>
 
-        <com.facebook.drawee.view.SimpleDraweeView
+        <com.hhy.bean.ImageViewDemo
             android:id="@+id/hhy_personal_image"
             android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_height="42dp"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="8dp"
+            android:layout_marginRight="20dp"
             android:layout_centerVertical="true"
             android:src="@drawable/icon_xiang"
             />
@@ -76,8 +76,8 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/hhy_personalinfo_touxiang_relative"
-        android:layout_marginTop="10dp"
-        android:background="@color/background_white">
+        android:layout_marginTop="15dp"
+        android:background="@color/hhy_white">
 
         <TextView
             android:id="@+id/hhy_personal_lefttext"
@@ -112,8 +112,8 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/hhy_personalinfo_nicheng_relative"
-        android:layout_marginTop="10dp"
-        android:background="@color/background_white">
+        android:layout_marginTop="15dp"
+        android:background="@color/hhy_white">
 
         <TextView
             android:id="@+id/hhy_personal_accountname"
@@ -141,8 +141,8 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/hhy_personalinfo_account_relative"
-        android:layout_marginTop="10dp"
-        android:background="@color/background_white">
+        android:layout_marginTop="15dp"
+        android:background="@color/hhy_white">
 
         <TextView
             android:id="@+id/hhy_personal_sexname"
@@ -189,8 +189,8 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_below="@id/hhy_personalinfo_sex_relative"
-        android:layout_marginTop="10dp"
-        android:background="@color/background_white"
+        android:layout_marginTop="15dp"
+        android:background="@color/hhy_white"
         >
 
         <TextView
@@ -373,8 +373,9 @@
         android:id="@+id/hhy_personal_qianming_relative"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
         android:layout_below="@id/hhy_personal_star_zhankai"
-        android:background="@color/background_white">
+        android:background="@color/hhy_white">
         >
 
         <TextView

@@ -14,9 +14,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.LoginUser;
 import com.hhy.activity.SearchActivity;
 import com.hhy.bean.GuanZhu;
 import com.hhy.bean.ImageViewDemo;
+import com.jqs.servert.utils.MyApplication;
 import com.yanghuan.R;
 
 import org.xutils.common.Callback;
@@ -33,6 +35,7 @@ public class GuanZhuAdapter extends BaseAdapter {
     public static final int TYPE_1 = 0;
     public static final int TYPE_2 = 1;
     public static final int TYPE_3 = 2;
+    public static final int TYPE_4 = 3;
     List<GuanZhu> mList;
     private Context mContext;
     private LayoutInflater mInflater;
@@ -43,6 +46,7 @@ public class GuanZhuAdapter extends BaseAdapter {
     ViewHolder1 holder1;
     ViewHolder2 holder2;
     int id;
+    String url;
 
     private List<ViewHolder3> holders = new ArrayList<ViewHolder3>();//用于存放不同item行的viewHoder
 
@@ -51,7 +55,8 @@ public class GuanZhuAdapter extends BaseAdapter {
         mContext = context;
         this.relativeLayout = relativeLayout;
         mInflater = LayoutInflater.from(mContext);
-
+        MyApplication myApplication = (MyApplication) mContext.getApplicationContext();
+        url = myApplication.getUrlPath();
     }
 
     @Override
@@ -59,7 +64,7 @@ public class GuanZhuAdapter extends BaseAdapter {
         return mList.get(position).isB();
     }
 
-    public static final int TYPE_COUNT = 3;
+    public static final int TYPE_COUNT = 4;
 
     @Override
     public int getItemViewType(int position) {
@@ -71,7 +76,7 @@ public class GuanZhuAdapter extends BaseAdapter {
     @Override
     public int getViewTypeCount() {
 
-        return 3;
+        return TYPE_COUNT;
     }
 
 
@@ -231,20 +236,21 @@ public class GuanZhuAdapter extends BaseAdapter {
                 }
 
             });
+        }else if(getItemViewType(position) == TYPE_4) {
+            convertView = mInflater.inflate(R.layout.hhy_item_guanzhu_4, null);
         }
         return convertView;
     }
 
     private void setDataBase(String biaozhi,int muid,int mflag) {
         //当不再关注某人时，从数据库将此人删除
-        String url = "http://10.201.1.148:8888/HttpServer/HttpServer";
         RequestParams params = new RequestParams(url);
         if("deleteMcare".equals(biaozhi)){
-            params.addBodyParameter("deleteMcare1",1+"");
+            params.addBodyParameter("deleteMcare1", LoginUser.userid+"");
             params.addBodyParameter("deleteMcare",muid+"");
         }else if("insertMcare".equals(biaozhi)){
             //还必须得到我的uid，一并插入，这里先假定我的uid是1（因为没有和登陆连起来，所以无法动态获得uid）
-            params.addBodyParameter("insertMcare1",1+"");
+            params.addBodyParameter("insertMcare1",LoginUser.userid+"");
             params.addBodyParameter("insertMcare",muid+"");
             params.addBodyParameter("mflag",mflag+"");
         }
@@ -272,10 +278,9 @@ public class GuanZhuAdapter extends BaseAdapter {
     }
 
     private void  selectDataBase(int myuid,int muid) {
-        String url = "http://10.201.1.148:8888/HttpServer/HttpServer";
         RequestParams params = new RequestParams(url);
         //还必须得到我的uid，一并插入，这里先假定我的uid是1（因为没有和登陆连起来，所以无法动态获得uid）
-        params.addBodyParameter("userd",1+"");
+        params.addBodyParameter("userd",LoginUser.userid+"");
         params.addBodyParameter("fan",muid+"");
         x.http().post(params, new Callback.CommonCallback<String>() {
             @Override

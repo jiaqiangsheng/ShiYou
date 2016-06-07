@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -37,7 +38,7 @@ public class ConfigFragment extends Fragment {
     AdviceFragment mAdviceFragment;
     hhy_EditionFragment mEditionFragment;
     AlertDialog.Builder dialog;
-
+    ImageView mImageView;
 
     @Nullable
     @Override
@@ -63,7 +64,7 @@ public class ConfigFragment extends Fragment {
 
     private void initView(View view) {
         mListView = (ListView) view.findViewById(R.id.config_listview);
-
+        mImageView = (ImageView) view.findViewById(R.id.hhy_config_back);
         mFragmentManager = getFragmentManager();
         mFragmentTransaction = mFragmentManager.beginTransaction();
         //为每一个item添加点击事件

@@ -8,8 +8,10 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.LoginUser;
 import com.hhy.bean.ImageViewDemo;
 import com.hhy.bean.UserInfo;
+import com.jqs.servert.utils.MyApplication;
 import com.yanghuan.R;
 
 import org.xutils.common.Callback;
@@ -26,13 +28,15 @@ public class Tianjia_PingBi_AccountAdapter extends BaseAdapter {
     Context mContext;
     LayoutInflater mInflater;
     String mbiaozhi;
+    String url;
     //biaozhi:判断是pingbiFragment还是pingbiNotSeeFragment
     public Tianjia_PingBi_AccountAdapter(List<UserInfo> list, Context context,String biaozhi) {
         mList = list;
         mContext = context;
         mbiaozhi = biaozhi;
         mInflater = LayoutInflater.from(mContext);
-
+        MyApplication myApplication = (MyApplication) mContext.getApplicationContext();
+        url = myApplication.getUrlPath();
     }
 
     @Override
@@ -87,9 +91,9 @@ public class Tianjia_PingBi_AccountAdapter extends BaseAdapter {
     }
 
     private void setDtaBase(int uid) {
-        String url = "http://10.201.1.148:8888/HttpServer/HttpServer";
         RequestParams params = new RequestParams(url);
-        params.addQueryStringParameter("myuid", 1+"");
+       /* params.addQueryStringParameter("myuid", 1+"");*/
+        params.addQueryStringParameter("myuid", LoginUser.userid+"");
         if ("pingbita".equals(mbiaozhi)) {
             params.addQueryStringParameter("deleteMstop", uid + "");
         } else if ("notsee".equals(mbiaozhi)) {

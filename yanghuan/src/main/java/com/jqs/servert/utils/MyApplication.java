@@ -13,6 +13,7 @@ import org.xutils.x;
  */
 public class MyApplication extends Application{
     private String url = "http://10.201.1.150:8080/HttpServert/httpServlet";
+    private String urlPath = "http://10.201.1.148:8888/HttpServer/HttpServer";
     //Application的onCreate早于所有的Activity的onCreate方法
     @Override
     public void onCreate() {
@@ -24,5 +25,8 @@ public class MyApplication extends Application{
 
     public String getUrl() {
         return url;
+    }
+    public String getUrlPath() {
+        return urlPath;
     }
 }

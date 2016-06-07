@@ -13,6 +13,8 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.LoginUser;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.handmark.pulltorefresh.library.ILoadingLayout;
@@ -21,6 +23,7 @@ import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.hhy.adapter.PingBiAddAdapter;
 import com.hhy.bean.UserInfo;
 import com.hhy.bean.User_Pingbi;
+import com.jqs.servert.utils.MyApplication;
 import com.yanghuan.BuildConfig;
 import com.yanghuan.R;
 
@@ -51,9 +54,8 @@ public class PinBiAddActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hhy_fragment_pingbi_add);
-
-        //初始化xUtils
-        initXUtils();
+        MyApplication myApplication = (MyApplication) getApplication();
+        url = myApplication.getUrlPath();
         initView();
         initData();
 
@@ -107,7 +109,8 @@ public class PinBiAddActivity extends AppCompatActivity {
                 String resu = gson.toJson(mUidList);
                 RequestParams params = new RequestParams(url);
                 //当前登陆的人的uid,现在默认为1，以后从登录界面获取
-                params.addQueryStringParameter("loginuserid", 1+"");
+               /* params.addQueryStringParameter("loginuserid", 1+"");*/
+                params.addQueryStringParameter("loginuserid", LoginUser.userid+"");
                 if("pingbita".equals(biaozhi)){
                     params.addQueryStringParameter("uid",resu);
                 }else if("notsee".equals(biaozhi)){
@@ -160,11 +163,6 @@ public class PinBiAddActivity extends AppCompatActivity {
         });
     }
 
-    private void initXUtils() {
-        x.Ext.init(getApplication());
-        x.Ext.setDebug(BuildConfig.DEBUG);
-    }
-
     private void initStatus() {
         //设置头部下拉刷新时的样式
         ILoadingLayout topLayout = mPullToRefreshListView.getLoadingLayoutProxy(true, false);
@@ -205,7 +203,6 @@ public class PinBiAddActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        url = "http://10.201.1.148:8888/HttpServer/HttpServer";
         mTextView = (TextView) findViewById(R.id.hhy_pingbi_add_wancheng);
         mRelativeLayout = (RelativeLayout) findViewById(R.id.hhy_pingbiadd_relative);
         mPullToRefreshListView = (PullToRefreshListView) findViewById(R.id.hhy_pingbi_add_listview);

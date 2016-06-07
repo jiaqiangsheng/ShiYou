@@ -19,7 +19,6 @@ public class NearyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hhy_activity_neary);
-
         initData();
     }
 

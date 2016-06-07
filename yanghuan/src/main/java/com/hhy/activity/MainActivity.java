@@ -16,6 +16,7 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 import com.hhy.fragment.ConfigFragment;
+import com.jqs.servert.utils.MyApplication;
 import com.yanghuan.R;
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
@@ -24,7 +25,7 @@ import org.xutils.x;
 import cn.jpush.android.api.JPushInterface;
 
 /**
- * 项目
+ * 项目(设置页面)
  */
 public class MainActivity extends AppCompatActivity {
     public static final String MESSAGE = "messageNotification";
@@ -44,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
         //极光推送初始化
         JPushInterface.setDebugMode(true);
         JPushInterface.init(MainActivity.this);
+        MyApplication myApplication = (MyApplication) getApplication();
+        mPath = myApplication.getUrlPath();
         initFlag();
         initData();
 
@@ -117,7 +120,6 @@ public class MainActivity extends AppCompatActivity {
         //POST请求
         //第一步：设置访问路径以及携带数据
         if(flag){
-            mPath = "http://10.201.1.148:8888/HttpServer/HttpServer";
             RequestParams params = new RequestParams(mPath);
             params.addBodyParameter("biaozhi",biaozhi);
             //代表相关按钮被打开，可以发送通知了

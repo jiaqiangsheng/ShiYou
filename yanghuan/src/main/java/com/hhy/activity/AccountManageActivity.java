@@ -10,6 +10,8 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -17,6 +19,7 @@ import com.hhy.adapter.AccountManageAdapter;
 import com.hhy.bean.AccountManage;
 import com.hhy.bean.UserInfo;
 import com.yanghuan.BuildConfig;
+import com.yanghuan.R;
 
 
 import org.xutils.common.Callback;
@@ -29,7 +32,7 @@ import java.util.List;
 import java.util.Map;
 
 public class AccountManageActivity extends AppCompatActivity {
-   /* public static final String SAVE = "addAccount";
+    public static final String SAVE = "addAccount";
     List<AccountManage> mManageList;
     AccountManageAdapter mManageAdapter;
     ListView mListView;
@@ -45,7 +48,6 @@ public class AccountManageActivity extends AppCompatActivity {
     Map<String, String> map;
     String url;
     List<String> mPhoneList;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,12 +60,10 @@ public class AccountManageActivity extends AppCompatActivity {
         setAdapter();
         setLinstener();
     }
-
     private void initXUtils() {
         x.Ext.init(getApplication());
         x.Ext.setDebug(BuildConfig.DEBUG);
     }
-
     private void setLinstener() {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -75,11 +75,9 @@ public class AccountManageActivity extends AppCompatActivity {
                     flag2 = true;
                     mIntent = new Intent(AccountManageActivity.this, AddAccountActivity.class);
                     startActivity(mIntent);
-
                     //此处可以成功
                     //Toast.makeText(AccountManageActivity.this, position + " 添加账号", Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
         mTextView.setOnClickListener(new View.OnClickListener() {
@@ -97,7 +95,6 @@ public class AccountManageActivity extends AppCompatActivity {
                 }
             }
         });
-
         mImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -105,21 +102,16 @@ public class AccountManageActivity extends AppCompatActivity {
                 AccountManageActivity.this.finish();
             }
         });
-
-
     }
-
     private void initView() {
         url = "http://10.201.1.148:8888/HttpServer/HttpServer";
-
         mImageView = (ImageView) findViewById(R.id.hhy_manage_back_image);
         mListView = (ListView) findViewById(R.id.hhy_account_manage);
         mTextView = (TextView) findViewById(R.id.hhy_accountM_bianji);
     }
-
     private void initData() {
         mManageList = new ArrayList<AccountManage>();
-      *//*  Intent intent = getIntent();
+       /* Intent intent = getIntent();
         url = intent.getStringExtra("url");
         uname = intent.getStringExtra("uname");
         String flag = intent.getStringExtra("fla");
@@ -127,11 +119,10 @@ public class AccountManageActivity extends AppCompatActivity {
         if(url != null && uname != null){
             accountManage = new AccountManage(url,uname, 0);
             mManageList.add(accountManage);
-        }*//*
+        }*/
         //
         sharedPreferences = getSharedPreferences(SAVE, MODE_APPEND);
         i = 0;
-
         map = (Map<String, String>) sharedPreferences.getAll();
         //Toast.makeText(AccountManageActivity.this, map.size()+"偏好设置", Toast.LENGTH_SHORT).show();
         if (i == 0) {
@@ -148,24 +139,19 @@ public class AccountManageActivity extends AppCompatActivity {
                 accountManage = new AccountManage(url, uname, 0);
                 mManageList.add(accountManage);
             }
-
         }
-
         AccountManage accountManage1 = new AccountManage("http://o6nj6n5ea.bkt.clouddn.com/hhy/icon_xiang.jpg", "漩涡鸣人", 0);
         AccountManage accountManage2 = new AccountManage("http://o6nj6n5ea.bkt.clouddn.com/hhy/lag.png", "添加账号", 1);
         AccountManage accountManage3 = new AccountManage("http://o6nj6n5ea.bkt.clouddn.com/hhy/icon_xiang.jpg", "退出当前帐号", 2);
-
         mManageList.add(accountManage1);
         mManageList.add(accountManage2);
         mManageList.add(accountManage3);
         //selectDataBase();
     }
-
     private void setAdapter() {
         mManageAdapter = new AccountManageAdapter(mManageList, AccountManageActivity.this, flag, uname);
         mListView.setAdapter(mManageAdapter);
     }
-
     private void selectDataBase() {
         RequestParams params = new RequestParams(url);
         Gson gson = new Gson();
@@ -173,7 +159,6 @@ public class AccountManageActivity extends AppCompatActivity {
         params.addQueryStringParameter("mPhoneList", mPhoneListString);
         final AccountManage accountManaget = null;
         final AccountManage accountManagef = null;
-
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
@@ -191,26 +176,18 @@ public class AccountManageActivity extends AppCompatActivity {
                     accountManage = new AccountManage(userInfo.getUrl(), userInfo.getUname(), 0);
                     mManageList.add(accountManage);
                 }
-               *//* mManageList.add(accountManaget);
-                mManageList.add(accountManagef);*//*
-
+               /* mManageList.add(accountManaget);
+                mManageList.add(accountManagef);*/
             }
-
             @Override
             public void onError(Throwable ex, boolean isOnCallback) {
-
             }
-
             @Override
             public void onCancelled(CancelledException cex) {
-
             }
-
             @Override
             public void onFinished() {
-
             }
         });
     }
-*/
 }

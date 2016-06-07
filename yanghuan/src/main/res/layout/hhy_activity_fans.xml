@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp">
         <ImageView
+            android:id="@+id/hhy_fans_back"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_centerVertical="true"

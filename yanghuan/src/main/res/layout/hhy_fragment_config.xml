@@ -11,6 +11,7 @@
         android:layout_height="40dp"
         android:background="@color/shaiXuan">
         <ImageView
+            android:id="@+id/hhy_config_back"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_centerVertical="true"

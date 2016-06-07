@@ -22,12 +22,12 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.google.gson.Gson;
 import com.hhy.bean.UserInfo;
 import com.hhy.bean.lxx_UserInfo;
-import com.yanghuan.BuildConfig;
+import com.jqs.servert.utils.MyApplication;
 import com.yanghuan.R;
-
 
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
@@ -44,6 +44,7 @@ public class AddAccountActivity extends AppCompatActivity {
     public static final int Si = 4;
     EditText userNameEditText;
     EditText passwordEditText;
+    ImageView mImageView;
     Intent mIntent;
     String userNameString;
     String passwordString;
@@ -75,8 +76,8 @@ public class AddAccountActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hhy_activity_add_account);
-        //初始化xUtils
-        initXUtils();
+        MyApplication myApplication = (MyApplication) getApplication();
+        url = myApplication.getUrlPath();
         // adjustIsLogin(); //记住密码去内存中自行验证
         initViews();
         intdata();
@@ -162,16 +163,11 @@ public class AddAccountActivity extends AppCompatActivity {
 
     }
 
-    private void initXUtils() {
-        x.Ext.init(getApplication());
-        x.Ext.setDebug(BuildConfig.DEBUG);
-    }
-
     private void intdata() {
         sharedPreferences = getSharedPreferences(SAVE, MODE_APPEND);
         i = 0;
         a = 0;
-        url = "http://10.201.1.148:8888/HttpServer/HttpServer";
+       /* url = "http://10.201.1.148:8888/HttpServer/HttpServer";*/
         map = (Map<String, String>) sharedPreferences.getAll();
         if (i == 0) {
             i = map.size() / Si;
@@ -219,6 +215,12 @@ public class AddAccountActivity extends AppCompatActivity {
     }
 
     private void initListeners() {
+        mImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -246,6 +248,7 @@ public class AddAccountActivity extends AppCompatActivity {
     private void initViews() {
         userNameEditText = (EditText) findViewById(R.id.username);
         passwordEditText = (EditText) findViewById(R.id.password);
+        mImageView = (ImageView) findViewById(R.id.hhy_addaccount_back);
         checkBox = (CheckBox) findViewById(R.id.CheckButton);
         list = new ArrayList<HashMap<String, Object>>();
         loginList = (ListView) findViewById(R.id.loginQQList);
@@ -337,9 +340,9 @@ public class AddAccountActivity extends AppCompatActivity {
                         String string = sharedPreferences.getString("username" + i, "");
                         Toast.makeText(AddAccountActivity.this, string, Toast.LENGTH_SHORT).show();
 
-                        Intent intent = new Intent(AddAccountActivity.this, SucessActivity.class);
+                        /*Intent intent = new Intent(AddAccountActivity.this, SucessActivity.class);
                         intent.putExtra("name", userNameString);
-                        startActivity(intent);
+                        startActivity(intent);*/
 
                     } else {
                         Toast.makeText(AddAccountActivity.this, "账号密码不匹配" + result.toString(), Toast.LENGTH_SHORT).show();

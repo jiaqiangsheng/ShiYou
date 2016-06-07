@@ -23,6 +23,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.LoginUser;
 import com.lxx.bean.UserInfo;
 import com.yanghuan.BuildConfig;
 import com.yanghuan.MyApplication.ShiYouActivity;
@@ -41,6 +42,9 @@ import cn.smssdk.EventHandler;
 import cn.smssdk.SMSSDK;
 import cn.smssdk.gui.RegisterPage;
 
+/**
+ * lxx的登陆界面
+ */
 
 public class MainActivity extends AppCompatActivity {
     public static final String SAVE="save";
@@ -272,7 +276,6 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onSuccess(String result) {
                     //访问成功，参数其实就是PrintWriter写回的值
-
                     if(result.toString().equals("Success")){
                         if(checkBox.isChecked()) {
                             if (!IsExist(userNameString)) {
@@ -323,6 +326,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                         }
+                        selectLoginUid(userNameString);
                         String string=sharedPreferences.getString("username"+i,"");
                         Toast.makeText(MainActivity.this, string, Toast.LENGTH_SHORT).show();
                         Intent intent=new Intent(MainActivity.this,ShiYouActivity.class);
@@ -384,6 +388,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
     private void addUser(UserInfo user){
         HashMap<String,Object> map=new HashMap<String,Object>();
 
@@ -607,6 +612,37 @@ public class MainActivity extends AppCompatActivity {
         Intent intent=new Intent(MainActivity.this,zhuce.class);
         intent.putExtra("phone", phone);
         startActivity(intent);
+    }
+
+    private void selectLoginUid(String userNameString) {
+        //根据用户输入的有效手机号从user表中查出对应的uid
+        String urlpath = "http://10.201.1.151:8080/JavaAppWeb/selectUserId";
+        RequestParams params = new RequestParams(urlpath);
+        params.addBodyParameter("phone", userNameString);
+        x.http().post(params, new Callback.CommonCallback<String>() {
+            @Override
+            public void onSuccess(String result) {
+                //查询成功
+                int uid = Integer.parseInt(result);
+                LoginUser.userid = uid;//将此uid设为全局uid
+            }
+
+            @Override
+            public void onError(Throwable ex, boolean isOnCallback) {
+
+            }
+
+            @Override
+            public void onCancelled(CancelledException cex) {
+
+            }
+
+            @Override
+            public void onFinished() {
+
+            }
+        });
+
     }
 
 }
