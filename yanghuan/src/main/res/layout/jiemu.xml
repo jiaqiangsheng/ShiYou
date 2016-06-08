@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"/>
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+     <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+         <ImageView
+            android:id="@+id/jiemu_image1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/jm1"
+            />
+        <TextView
+            android:id="@+id/jiemu_text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:text="1"/>
+     </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"/>
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/jiemu_image2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/jm2"
+                />
+            <TextView
+                android:id="@+id/jiemu_text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:text="1"/>
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"/>
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/jiemu_image3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/jm3"
+                />
+            <TextView
+                android:id="@+id/jiemu_text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:text="1"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/middle"
+        android:layout_below="@id/top"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/jiemu_image21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/jm4"
+                />
+            <TextView
+                android:id="@+id/jiemu_text21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:text="1"/>
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"/>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/jiemu_image22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/jm5"
+                />
+            <TextView
+                android:id="@+id/jiemu_text22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:text="1"/>
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"/>
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/jiemu_image23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/jm6"
+                />
+            <TextView
+                android:id="@+id/jiemu_text23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:text="1"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_below="@id/middle"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/jiemu_image31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/jm7"
+                />
+            <TextView
+                android:id="@+id/jiemu_text31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:text="1"/>
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"/>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/jiemu_image32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/jm8"
+                />
+            <TextView
+                android:id="@+id/jiemu_text32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:text="1"/>
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"/>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/jiemu_image33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/jm4"
+                />
+            <TextView
+                android:id="@+id/jiemu_text33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:text="1"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"/>
+
+</LinearLayout>

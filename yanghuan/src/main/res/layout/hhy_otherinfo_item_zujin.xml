@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/otherinfo_zuijin_image"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        fresco:placeholderImage="@drawable/ic_media_video_poster"
+        fresco:placeholderImageScaleType="focusCrop"
+        fresco:roundedCornerRadius="25dp"
+        fresco:roundTopLeft="true"
+        fresco:roundTopRight="true"
+        fresco:roundBottomLeft="true"
+        fresco:roundBottomRight="true"
+        />
+
+    <TextView
+        android:id="@+id/otherinfo_zuijin_uname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/otherinfo_zuijin_image"
+        android:text="十五年等候候鸟"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/otherinfo_zuijin_usign"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/otherinfo_zuijin_uname"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/otherinfo_zuijin_image"
+        android:text="火热聊天室邀请你的加入"
+        android:textSize="20sp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="加入"
+        android:textSize="20sp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        />
+
+
+
+</RelativeLayout>

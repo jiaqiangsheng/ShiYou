@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jqs.example.read.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/readbook_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/textDown"
+        />
+    <com.jqs.example.utils.MyViewPager
+        android:id="@+id/readbook_center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        />
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorWhite"
+        layout="@layout/bottom"
+        />
+</LinearLayout>

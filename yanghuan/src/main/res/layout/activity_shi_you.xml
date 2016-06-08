@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yanghuan.MyApplication.ShiYouActivity">
+
+
+    <!--顶部标题栏-->
+
+
+
+    <!--中间正文部分-->
+    <com.yanghuan.MyViews.NoScrollViewPager
+        android:id="@+id/shi_you_middle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9" >
+    </com.yanghuan.MyViews.NoScrollViewPager>
+
+    <!--底部导航栏，从外部包含进来-->
+    <!--include标签如何想重写layout开头的属性，必须重写宽和高-->
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        layout="@layout/total"/>
+
+</LinearLayout>

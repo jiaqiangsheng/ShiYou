@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/background_white"
+                android:paddingBottom="16dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp">
+
+
+    <com.hhy.bean.ImageViewDemo
+        android:id="@+id/hhy_pingbi_simpleDraweeView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/icon_uzao"/>
+
+    <TextView
+        android:id="@+id/hhy_pingbi_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/hhy_pingbi_simpleDraweeView"
+        android:text="酷宝宝有时很任性"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/hhy_pingbi_bianqian"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/hhy_pingbi_name"
+        android:layout_below="@id/hhy_pingbi_name"
+        android:text="好不容易积累的100多首歌，手一残就没了"/>
+
+    <ImageView
+        android:id="@+id/hhy_pingbi_dagou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/hhy_icon_dagou"
+
+        />
+
+</RelativeLayout>

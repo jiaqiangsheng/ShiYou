@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hhy.activity.OtherInfoActivity">
+
+    <RelativeLayout
+        android:id="@+id/other_info_relative"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/shaiXuan">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="个人信息"
+            android:textSize="20dp"/>
+
+        <ImageView
+            android:id="@+id/otherimfo_addimage"
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="0dp"
+            android:src="@drawable/otherinfo_addimage"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/otherinfo_xinxi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/hhy_backimage">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/otherinfo_touxiang"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            fresco:placeholderImage="@drawable/ic_media_video_poster"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:roundAsCircle="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/otherinfo_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/otherinfo_touxiang"
+            android:layout_centerHorizontal="true"
+            android:text="明若晓溪"
+            android:textSize="20sp"
+            />
+
+        <ImageView
+            android:id="@+id/otherinfo_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/otherinfo_name"
+            android:layout_marginLeft="80dp"
+            android:src="@drawable/sex_woman"
+            />
+
+        <TextView
+            android:id="@+id/otherinfo_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/otherinfo_name"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/otherinfo_icon"
+            android:text="20"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/otherinfo_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/otherinfo_name"
+            android:layout_marginLeft="15sp"
+            android:layout_toRightOf="@id/otherinfo_age"
+            android:text="白羊座"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/otherinfo_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/otherinfo_name"
+            android:layout_marginLeft="15sp"
+            android:layout_toRightOf="@id/otherinfo_star"
+            android:text="河南郑州"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/otherinfo__guanzhu_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/otherinfo_address"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="10dp"
+            android:text="232"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/otherinfo_fans_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/otherinfo_address"
+            android:layout_marginLeft="260dp"
+            android:layout_marginTop="10dp"
+            android:text="232"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/otherinfo_guanzhu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/otherinfo__guanzhu_number"
+            android:layout_marginLeft="98dp"
+            android:layout_marginTop="2dp"
+            android:text="关注"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/otherinfo_fans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/otherinfo__guanzhu_number"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="2dp"
+            android:text="粉丝"
+            android:textSize="20sp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/otherinfo_xinxi"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/otherinfo_jiaguanzhu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:text="+关注"
+            android:textSize="20sp"
+            />
+
+        <Button
+            android:id="@+id/otherinfo_sixin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="230dp"
+            android:text="私信"
+            android:textSize="20sp"
+            />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/otherinfo_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+    </ListView>
+</LinearLayout>

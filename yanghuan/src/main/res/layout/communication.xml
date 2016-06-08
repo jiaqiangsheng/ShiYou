@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/toobbakground">
+        <RadioGroup
+            android:id="@+id/actionbar_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:layout_gravity="center_horizontal"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+            <RadioButton
+                android:id="@+id/bn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:checked="true"
+                style="@style/radio2"
+                android:background="@drawable/yhleft"
+                android:text="动态"/>
+            <RadioButton
+                android:id="@+id/btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                style="@style/radio2"
+                android:background="@drawable/yhright"
+                android:text="资讯"
+                />
+        </RadioGroup>
+    </android.support.v7.widget.Toolbar>
+
+
+    <com.yanghuan.MyViews.NoScrollViewPager
+        android:id="@+id/Lxx_Viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

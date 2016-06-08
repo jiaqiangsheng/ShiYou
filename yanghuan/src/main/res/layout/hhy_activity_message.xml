@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hhy_background_gray"
+    tools:context="com.hhy.activity.MessageActivity">
+    <RelativeLayout
+        android:id="@+id/hhy_message_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/shaiXuan">
+        <ImageView
+            android:id="@+id/hhy_message_back_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="消息通知"
+            android:textSize="20dp"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hhy_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/hhy_message_title"
+        android:background="@color/background_white"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:text="评论我的"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            />
+
+        <ImageView
+            android:id="@+id/hhy_message_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:src="@drawable/butn_close"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hhy_Praise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hhy_comment"
+        android:layout_marginTop="5dp"
+        android:background="@color/background_white"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:text="赞我的"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            />
+
+        <ImageView
+            android:id="@+id/hhy_message_praise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:src="@drawable/butn_close"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hhy_liaotiantongzhi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hhy_Praise"
+        android:layout_marginTop="20dp"
+        android:background="@color/background_white"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:text="聊天室通知"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            />
+
+        <ImageView
+            android:id="@+id/hhy_message_chatroom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:paddingRight="10dp"
+            android:src="@drawable/butn_close"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hhy_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hhy_liaotiantongzhi"
+        android:layout_marginTop="5dp"
+        android:background="@color/background_white"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:text="未关注人消息"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            />
+
+        <ImageView
+            android:id="@+id/hhy_message_nocare_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:src="@drawable/butn_close"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hhy_newfans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hhy_message"
+        android:layout_marginTop="40dp"
+        android:background="@color/background_white"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:text="新粉丝"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            />
+
+        <ImageView
+            android:id="@+id/hhy_message_newfans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:src="@drawable/butn_close"/>
+
+    </RelativeLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打开粉丝界面"
+        android:onClick="openFans"
+        android:layout_below="@id/hhy_newfans"/>
+
+
+</RelativeLayout>

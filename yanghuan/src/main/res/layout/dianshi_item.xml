@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/dianshi_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="偶像电视剧"
+        android:textSize="25sp"/>
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+   <ImageView
+       android:id="@+id/dianshi_image1"
+       android:layout_width="match_parent"
+       android:layout_height="150dp"
+       android:scaleType="fitXY"
+       android:src="@mipmap/a1"/>
+        <TextView
+            android:id="@+id/dianshi_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="更新30集"
+            android:textSize="10sp"
+            android:layout_gravity="right|bottom"/>
+    </FrameLayout>
+    <TextView
+        android:id="@+id/xiangqing"
+       android:layout_alignParentLeft="true"
+        android:text="好"
+        android:textSize="15sp"
+        android:layout_below="@id/frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+   <com.yanghuan.Beans.MyGridView
+       android:id="@+id/dianshi_gridview"
+       android:layout_below="@id/xiangqing"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="20dp"
+       android:layout_marginBottom="5dp"
+       android:layout_marginLeft="10dp"
+       android:stretchMode="columnWidth"
+       android:horizontalSpacing="2.5dp"
+       android:verticalSpacing="2.5dp"
+       android:numColumns="2"
+       >
+
+   </com.yanghuan.Beans.MyGridView>
+
+
+</RelativeLayout>

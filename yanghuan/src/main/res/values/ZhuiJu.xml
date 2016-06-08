@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="week">
+        <item >提前2分钟</item>
+        <item >提前3分钟</item>
+        <item >提前4分钟</item>
+        <item >提前5分钟</item>
+        <item >提前6分钟</item>
+        <item >提前10分钟</item>
+        <item >提前20分钟</item>
+    </string-array>
+</resources>

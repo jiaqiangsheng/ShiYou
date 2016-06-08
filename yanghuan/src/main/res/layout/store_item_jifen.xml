@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/store_item_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/store_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="更新30集"
+            android:textColor="@color/text"
+            android:textSize="10sp"
+            android:layout_gravity="right|bottom" />
+    </FrameLayout>
+    <TextView
+        android:id="@+id/store_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="伪装者"
+        android:textSize="25sp"
+        />
+
+</LinearLayout>

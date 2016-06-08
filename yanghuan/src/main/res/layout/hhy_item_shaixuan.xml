@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/gray"
+              android:orientation="vertical">
+
+
+    <RadioGroup
+        android:id="@+id/RadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/woman"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:background="@drawable/radiobutton_style"
+            android:button="@null"
+            android:drawableLeft="@drawable/sex_woman"
+            android:paddingLeft="40dp"
+            android:text="女"/>
+
+        <RadioButton
+            android:id="@+id/man"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:background="@drawable/radiobutton_style"
+            android:button="@null"
+            android:drawableLeft="@drawable/sex_man"
+            android:paddingLeft="40dp"
+            android:text="男"/>
+
+        <RadioButton
+            android:id="@+id/all"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:background="@drawable/radiobutton_style"
+            android:button="@null"
+            android:paddingLeft="50dp"
+            android:text="全部"/>
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/age_relative"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shaixuan_ageandxingazuo_style">
+
+        <TextView
+            android:id="@+id/age_shaixuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="年龄"
+            android:textColor="@color/black"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/shaixuan_biaoqian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/shaixuan_right1"
+            android:text="不限"
+            android:textColor="@color/black"
+            android:textSize="20dp"/>
+
+        <ImageView
+            android:id="@+id/shaixuan_right1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/expander_close"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/age_zhankai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        >
+
+        <Button
+            android:id="@+id/age_roundButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_button"
+            android:text="不限"
+            />
+
+        <Button
+            android:id="@+id/age_roundButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/age_roundButton1"
+            android:background="@drawable/shape_roundbutton"
+            android:text="18-23岁"
+            />
+
+        <Button
+            android:id="@+id/age_roundButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/age_roundButton2"
+            android:background="@drawable/shape_roundbutton"
+            android:text="24-28岁"
+            />
+
+        <Button
+            android:id="@+id/age_roundButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/age_roundButton3"
+            android:background="@drawable/shape_roundbutton"
+            android:text="29-35岁"
+            />
+
+
+        <Button
+            android:id="@+id/age_roundButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/age_roundButton4"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_roundbutton"
+            android:text="36-42岁"
+            />
+
+        <Button
+            android:id="@+id/age_roundButton6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/age_roundButton2"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/age_roundButton5"
+            android:background="@drawable/shape_roundbutton"
+            android:text="42岁以上"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hobit_relative"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shaixuan_ageandxingazuo_style">
+
+        <TextView
+            android:id="@+id/shaixuan_hobit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="影视爱好"
+            android:textColor="@color/black"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/shaixuan_biaoqianhobit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/shaixuan_right2"
+            android:text="不限"
+            android:textColor="@color/black"
+            android:textSize="20dp"/>
+
+        <ImageView
+            android:id="@+id/shaixuan_right2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/expander_close"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hobit_zhankai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        >
+
+        <Button
+            android:id="@+id/hobit_roundButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_roundbutton"
+            android:text="冒险"
+            />
+
+        <Button
+            android:id="@+id/hobit_roundButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/hobit_roundButton1"
+            android:background="@drawable/shape_roundbutton"
+            android:text="喜剧"
+            />
+
+        <Button
+            android:id="@+id/hobit_roundButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/hobit_roundButton2"
+            android:background="@drawable/shape_roundbutton"
+            android:text="科幻"
+            />
+
+        <Button
+            android:id="@+id/hobit_roundButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/hobit_roundButton3"
+            android:background="@drawable/shape_roundbutton"
+            android:text="惊悚悬疑"
+            />
+
+        <Button
+            android:id="@+id/hobit_roundButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hobit_roundButton4"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_roundbutton"
+            android:text="古装武侠"
+            />
+
+        <Button
+            android:id="@+id/hobit_roundButton6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hobit_roundButton2"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/hobit_roundButton5"
+            android:background="@drawable/shape_roundbutton"
+            android:text="枪战动作"
+            />
+
+        <Button
+            android:id="@+id/hobit_roundButton7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hobit_roundButton3"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/hobit_roundButton6"
+            android:background="@drawable/shape_roundbutton"
+            android:text="浪漫爱情"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_xingzuo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shaixuan_ageandxingazuo_style">
+
+        <TextView
+            android:id="@+id/shaixuan_xingzuo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="星座"
+            android:textColor="@color/black"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/shaixuan_biaoqian3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/shaixuan_right3"
+            android:text="不限"
+            android:textColor="@color/black"
+            android:textSize="20dp"/>
+
+        <ImageView
+            android:id="@+id/shaixuan_right3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/expander_close"/>
+
+    </RelativeLayout>
+
+    <!--起初处于隐藏状态-->
+    <RelativeLayout
+        android:id="@+id/star_zhankai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        >
+
+        <Button
+            android:id="@+id/star_roundButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_roundbutton"
+            android:text="金牛座"
+            />
+
+        <Button
+            android:id="@+id/star_roundButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/star_roundButton1"
+            android:background="@drawable/shape_roundbutton"
+            android:text="白羊座"
+            />
+
+        <Button
+            android:id="@+id/star_roundButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/star_roundButton2"
+            android:background="@drawable/shape_roundbutton"
+            android:text="双子座"
+            />
+
+        <Button
+            android:id="@+id/star_roundButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/star_roundButton3"
+            android:background="@drawable/shape_roundbutton"
+            android:text="巨蟹座"
+            />
+
+
+        <Button
+            android:id="@+id/star_roundButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/star_roundButton4"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_roundbutton"
+            android:text="狮子座"
+            />
+
+        <Button
+            android:id="@+id/star_roundButton6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/star_roundButton2"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/star_roundButton5"
+            android:background="@drawable/shape_roundbutton"
+            android:text="处女座"
+            />
+
+        <Button
+            android:id="@+id/star_roundButton7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/star_roundButton3"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/star_roundButton6"
+            android:background="@drawable/shape_roundbutton"
+            android:text="天秤座"
+            />
+
+        <Button
+            android:id="@+id/star_roundButton8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/star_roundButton4"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/star_roundButton7"
+            android:background="@drawable/shape_roundbutton"
+            android:text="天蝎座"
+            />
+
+        <Button
+            android:id="@+id/star_roundButton9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/star_roundButton5"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_roundbutton"
+            android:text="射手座"
+            />
+
+        <Button
+            android:id="@+id/star_roundButton10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/star_roundButton6"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/star_roundButton9"
+            android:background="@drawable/shape_roundbutton"
+            android:text="摩羯 "
+            />
+
+        <Button
+            android:id="@+id/star_roundButton11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/star_roundButton7"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/star_roundButton10"
+            android:background="@drawable/shape_roundbutton"
+            android:text="水瓶 "
+            />
+
+        <Button
+            android:id="@+id/star_roundButton12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/star_roundButton8"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/star_roundButton11"
+            android:background="@drawable/shape_roundbutton"
+            android:text="双鱼座"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

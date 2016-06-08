@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/background_white"
+              android:orientation="vertical"
+              android:paddingBottom="16dp"
+              android:paddingLeft="5dp"
+              android:paddingRight="16dp"
+              android:paddingTop="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/fans_touxiang"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/icon_uzao"
+            />
+
+        <TextView
+        android:id="@+id/fans_top_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/fans_touxiang"
+        android:layout_marginLeft="10dp"
+        android:text="酷宝宝"
+        android:textSize="18dp"
+        />
+
+        <TextView
+            android:id="@+id/fans_below_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/fans_touxiang"
+            android:layout_marginLeft="10dp"
+            android:text="酷宝宝"
+            android:textSize="18dp"
+            android:layout_below="@id/fans_top_text"
+            />
+        <ImageView
+            android:id="@+id/fans_right_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/card_icon_addattention"
+            />
+        <TextView
+            android:id="@+id/fans_right_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="加关注"
+            android:textSize="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_below="@id/fans_right_image"
+            />
+    </RelativeLayout>
+
+
+</LinearLayout>

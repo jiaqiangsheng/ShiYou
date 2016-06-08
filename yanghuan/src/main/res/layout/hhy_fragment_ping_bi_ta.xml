@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/hhy_background_gray"
+                tools:context="com.hhy.fragment.PingBiTaFragment">
+
+    <RelativeLayout
+        android:id="@+id/hhy_pingbi_others"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/shaiXuan">
+
+        <ImageView
+            android:id="@+id/hhy_pingbita_back_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="屏蔽他人"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/hhy_pingbita_relative"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/hhy_pingbi_others"
+        android:layout_marginTop="20dp"
+        android:background="@color/hhy_white">
+
+        <ImageView
+            android:id="@+id/hhy_pingbita"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="90dp"
+            android:src="@drawable/hhy_tianjia"/>
+
+        <TextView
+            android:id="@+id/hhy_pingbita_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/hhy_pingbita"
+            android:text="添加帐号"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/hhy_pingbita_tishi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/hhy_pingbita_relative"
+        android:text="添加过后将不再显示该人的动态"/>
+    <ListView
+        android:id="@+id/hhy_pingbi_others_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/hhy_pingbita_tishi">
+
+    </ListView>
+
+</LinearLayout>

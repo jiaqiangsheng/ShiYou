@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="请输入你的密码"
+        android:id="@+id/Lxx_phone"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:layout_marginTop="34dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提交"
+        android:id="@+id/button"
+        android:layout_alignRight="@+id/Lxx_phone"
+        android:layout_alignEnd="@+id/Lxx_phone"
+        android:layout_below="@+id/Lxx_phone"
+        android:layout_alignLeft="@+id/Lxx_phone"
+        android:layout_alignStart="@+id/Lxx_phone" />
+
+
+</RelativeLayout>
