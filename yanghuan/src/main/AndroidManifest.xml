@@ -9,8 +9,11 @@
     <uses-permission android:name="android.permission.GET_TASKS"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
     <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -42,6 +45,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
 
         <activity android:name=".MainActivity"/>
 
@@ -59,6 +63,15 @@
 
         <activity android:name="com.lxx.activity.Mycontext"/>
 
+=======
+        <activity android:name=".MainActivity"/>
+        <activity
+            android:name=".MyApplication.ShiYouActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+
+        </activity>
+        <activity android:name="com.lxx.activity.Mycontext"/>
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         <activity
             android:name="com.lxx.activity.Pictureshow"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
@@ -71,7 +84,16 @@
         <activity android:name=".MyApplication.JieMuItemActivity"/>
         <activity android:name=".MyApplication.XiangQingActivity"/>
         <activity android:name=".MyApplication.ScoreExangeActivity"/>
+<<<<<<< HEAD
         <activity android:name="com.lxx.activity.MainActivity"/>
+=======
+        <activity android:name="com.lxx.activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         <activity android:name=".MyApplication.WeiShiActivity"/>
         <activity android:name="com.lxx.activity.SucessActivity"/>
         <activity android:name="com.lxx.activity.zhuce"/>
@@ -110,7 +132,13 @@
 
 
         <!-- hhy -->
+<<<<<<< HEAD
         <activity android:name="com.hhy.activity.MainActivity"/>
+=======
+        <activity android:name="com.hhy.activity.MainActivity">
+
+        </activity>
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         <activity android:name="com.hhy.activity.FansActivity"/>
         <activity android:name="com.hhy.activity.AddAccountActivity"/>
         <activity android:name="com.hhy.activity.NearyActivity"/>
@@ -122,6 +150,12 @@
         <activity android:name="com.hhy.activity.PinBiAddActivity"/>
         <activity android:name="com.hhy.activity.LoginActivity"/>
         <activity android:name="com.hhy.activity.TongZhiActivity"/>
+<<<<<<< HEAD
+=======
+        <activity android:name="com.hhy.activity.PersonalInfoActivity">
+
+        </activity>
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         <!-- /hhy -->
 
         <activity android:name=".MyApplication.ScoreActivity"/>
@@ -131,10 +165,13 @@
         <activity android:name=".MyApplication.YuLeItemActivity"/>
         <activity android:name=".MyApplication.ShaoErItemActivity"/>
         <activity android:name=".MyApplication.ZhuiJuActivity">
+<<<<<<< HEAD
 
         <activity android:name="com.hhy.activity.PersonalInfoActivity">
         </activity>
         <!-- /hhy -->
+=======
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         </activity>
 
         <!-- 极光推送 -->
@@ -156,8 +193,12 @@
         <service
             android:name="cn.jpush.android.service.DownloadService"
             android:enabled="true"
+<<<<<<< HEAD
             android:exported="false">
         </service>
+=======
+            android:exported="false"></service>
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 
         <!-- Required SDK 核心功能 -->
         <!-- option since 2.0.5 可配置PushService，DaemonService,PushReceiver,AlarmReceiver的android:process参数 将JPush相关组件设置为一个独立进程 -->
@@ -243,6 +284,7 @@
         <!-- </>值来自开发者平台取得的AppKey -->
         <!-- 极光推送 -->
 
+<<<<<<< HEAD
         <!--选择多张照片 -->
         <activity
             android:name="com.lxx.chiocemorepicture.activity.MainActivity"
@@ -269,6 +311,21 @@
         </activity>
 
 
+=======
+
+        <!-- 选择多张照片 -->
+        <activity
+            android:name="com.lxx.chiocemorepicture.activity.MainActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name="com.lxx.chiocemorepicture.activity.AlbumActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name="com.lxx.chiocemorepicture.activity.ImageFile"></activity>
+        <activity android:name="com.lxx.chiocemorepicture.activity.ShowAllPhoto"></activity>
+        <activity android:name="com.lxx.chiocemorepicture.activity.GalleryActivity"></activity>
+        <activity android:name="com.lxx.activity.UpPicture"></activity>
+        <activity android:name=".MyApplication.HistoryActivity"></activity>
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
     </application>
 
 </manifest>

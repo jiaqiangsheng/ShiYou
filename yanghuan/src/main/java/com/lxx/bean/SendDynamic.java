@@ -1,9 +1,15 @@
 package com.lxx.bean;
 
+<<<<<<< HEAD
 import java.io.Serializable;
 import java.util.List;
 
 public class SendDynamic implements Serializable {
+=======
+import java.util.List;
+
+public class SendDynamic {
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 	private int fuid;
 
 	private String fcontext ;

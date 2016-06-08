@@ -4,8 +4,13 @@
     android:layout_height="match_parent">
     <ImageView
         android:id="@+id/score_exange_image1"
+<<<<<<< HEAD
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+=======
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         android:src="@mipmap/yh"
         android:layout_centerHorizontal="true"
         />

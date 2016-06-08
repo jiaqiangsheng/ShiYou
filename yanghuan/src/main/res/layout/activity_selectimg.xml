@@ -8,7 +8,11 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
+<<<<<<< HEAD
         android:background="@color/toobbakground" >
+=======
+        android:background="@color/black" >
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 
         <TextView
             android:layout_width="wrap_content"

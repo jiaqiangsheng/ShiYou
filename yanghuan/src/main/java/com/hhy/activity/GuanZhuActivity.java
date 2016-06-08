@@ -9,10 +9,18 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
+<<<<<<< HEAD
+=======
+import android.widget.ImageView;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+<<<<<<< HEAD
+=======
+import com.LoginUser;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 import com.cache.ACache;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -22,7 +30,11 @@ import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.hhy.adapter.GuanZhuAdapter;
 import com.hhy.bean.GuanZhu;
 import com.hhy.bean.UserInfo;
+<<<<<<< HEAD
 import com.yanghuan.BuildConfig;
+=======
+import com.jqs.servert.utils.MyApplication;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 import com.yanghuan.R;
 
 import org.xutils.common.Callback;
@@ -42,6 +54,10 @@ public class GuanZhuActivity extends AppCompatActivity {
     GuanZhu guanZhu;
     EditText mEditText;
     Intent mIntent;
+<<<<<<< HEAD
+=======
+    ImageView mImageView;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
     //使用缓存
     ACache mACache;
 
@@ -49,8 +65,13 @@ public class GuanZhuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hhy_activity_guan_zhu);
+<<<<<<< HEAD
         //初始化xUtils
         initXUtils();
+=======
+        MyApplication myApplication = (MyApplication) getApplication();
+        url = myApplication.getUrlPath();
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         initView();
         initData();
        // setAdapter();
@@ -128,33 +149,61 @@ public class GuanZhuActivity extends AppCompatActivity {
 
     private void initView() {
         mACache = ACache.get(GuanZhuActivity.this);
+<<<<<<< HEAD
         mEditText = (EditText) findViewById(R.id.hhy_guanzhu_editview);
         mPullToRefreshListView = (PullToRefreshListView) findViewById(R.id.guanzhu_listview);
         mRelativeLayout = (RelativeLayout) findViewById(R.id.guanzhu_relative);
+=======
+        mImageView = (ImageView) findViewById(R.id.hhy_guanzhu_back);
+        mEditText = (EditText) findViewById(R.id.hhy_guanzhu_editview);
+        mPullToRefreshListView = (PullToRefreshListView) findViewById(R.id.guanzhu_listview);
+        mRelativeLayout = (RelativeLayout) findViewById(R.id.guanzhu_relative);
+        mImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        Toast.makeText(GuanZhuActivity.this, "关注："+LoginUser.userid, Toast.LENGTH_SHORT).show();
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
     }
 
     private void initData() {
         mList = new ArrayList<GuanZhu>();
+<<<<<<< HEAD
         GuanZhu guanZhu1 = new GuanZhu(0, "酷宝宝有时很任性", "手一残100首歌就没了", "http://img3.imgtn.bdimg.com/it/u=2165175176,3806470859&fm=21&gp=0.jpg", 0,0, false);
         GuanZhu guanZhu2 = new GuanZhu(1, "酷宝宝有时很任性", "手一残100首歌就没了", "http://img3.imgtn.bdimg.com/it/u=2165175176,3806470859&fm=21&gp=0.jpg", 1,0, false);
         mList.add(guanZhu1);
         mList.add(guanZhu2);
+=======
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         selectDataBase();
     }
 
     private void setAdapter() {
+<<<<<<< HEAD
 
+=======
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         mGuanZhuAdapter = new GuanZhuAdapter(mList, GuanZhuActivity.this, mRelativeLayout);
         mPullToRefreshListView.setAdapter(mGuanZhuAdapter);
 
     }
 
     private void selectDataBase() {
+<<<<<<< HEAD
         url = "http://10.201.1.148:8888/HttpServer/HttpServer";
         //查收查询数据库，取出数据
         RequestParams params = new RequestParams(url);
         //1：是当前用户的uid，需要在用户登陆时获取他的uid，然后再传过来
         params.addQueryStringParameter("concern", "1");
+=======
+        //查收查询数据库，取出数据
+        RequestParams params = new RequestParams(url);
+        //1：是当前用户的uid，需要在用户登陆时获取他的uid，然后再传过来
+        params.addQueryStringParameter("concern", LoginUser.userid+"");
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
@@ -165,6 +214,7 @@ public class GuanZhuActivity extends AppCompatActivity {
                 Type type = new TypeToken<List<UserInfo>>() {
                 }.getType();
                 List<UserInfo> lists = gson.fromJson(result, type);
+<<<<<<< HEAD
 
                 //Toast.makeText(GuanZhuActivity.this, lists.toString(), Toast.LENGTH_SHORT).show();
                 for (int i = 0; i < lists.size(); i++) {
@@ -172,6 +222,24 @@ public class GuanZhuActivity extends AppCompatActivity {
                     Toast.makeText(GuanZhuActivity.this, userInfo.getFlag1()+"", Toast.LENGTH_SHORT).show();
                     guanZhu = new GuanZhu(userInfo.getUid(), userInfo.getUname(), userInfo.getUsign(), userInfo.getUrl(), 2,userInfo.getFlag1(), true);
                     mList.add(guanZhu);
+=======
+                Log.e("guanzhu：","进入前");
+                if(lists.size() == 0){
+                    Log.e("guanzhu：","123");
+                    GuanZhu guan = new GuanZhu(0, "酷宝宝有时很任性", "手一残100首歌就没了", "http://img3.imgtn.bdimg.com/it/u=2165175176,3806470859&fm=21&gp=0.jpg", 3,0, false);
+                    mList.add(guan);
+                }else{
+                    GuanZhu guanZhu1 = new GuanZhu(0, "酷宝宝有时很任性", "手一残100首歌就没了", "http://img3.imgtn.bdimg.com/it/u=2165175176,3806470859&fm=21&gp=0.jpg", 0,0, false);
+                    GuanZhu guanZhu2 = new GuanZhu(1, "酷宝宝有时很任性", "手一残100首歌就没了", "http://img3.imgtn.bdimg.com/it/u=2165175176,3806470859&fm=21&gp=0.jpg", 1,0, false);
+                    mList.add(guanZhu1);
+                    mList.add(guanZhu2);
+                    for (int i = 0; i < lists.size(); i++) {
+                        userInfo = lists.get(i);
+                        Toast.makeText(GuanZhuActivity.this, userInfo.getFlag1()+"", Toast.LENGTH_SHORT).show();
+                        guanZhu = new GuanZhu(userInfo.getUid(), userInfo.getUname(), userInfo.getUsign(), userInfo.getUrl(), 2,userInfo.getFlag1(), true);
+                        mList.add(guanZhu);
+                    }
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
                 }
                 setAdapter();
             }
@@ -193,8 +261,12 @@ public class GuanZhuActivity extends AppCompatActivity {
         });
     }
 
+<<<<<<< HEAD
     private void initXUtils() {
         x.Ext.init(getApplication());
         x.Ext.setDebug(BuildConfig.DEBUG);
     }
+=======
+
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 }

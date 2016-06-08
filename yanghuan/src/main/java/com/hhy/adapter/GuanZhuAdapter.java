@@ -14,9 +14,17 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+<<<<<<< HEAD
 import com.hhy.activity.SearchActivity;
 import com.hhy.bean.GuanZhu;
 import com.hhy.bean.ImageViewDemo;
+=======
+import com.LoginUser;
+import com.hhy.activity.SearchActivity;
+import com.hhy.bean.GuanZhu;
+import com.hhy.bean.ImageViewDemo;
+import com.jqs.servert.utils.MyApplication;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 import com.yanghuan.R;
 
 import org.xutils.common.Callback;
@@ -33,6 +41,10 @@ public class GuanZhuAdapter extends BaseAdapter {
     public static final int TYPE_1 = 0;
     public static final int TYPE_2 = 1;
     public static final int TYPE_3 = 2;
+<<<<<<< HEAD
+=======
+    public static final int TYPE_4 = 3;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
     List<GuanZhu> mList;
     private Context mContext;
     private LayoutInflater mInflater;
@@ -43,6 +55,10 @@ public class GuanZhuAdapter extends BaseAdapter {
     ViewHolder1 holder1;
     ViewHolder2 holder2;
     int id;
+<<<<<<< HEAD
+=======
+    String url;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 
     private List<ViewHolder3> holders = new ArrayList<ViewHolder3>();//用于存放不同item行的viewHoder
 
@@ -51,7 +67,12 @@ public class GuanZhuAdapter extends BaseAdapter {
         mContext = context;
         this.relativeLayout = relativeLayout;
         mInflater = LayoutInflater.from(mContext);
+<<<<<<< HEAD
 
+=======
+        MyApplication myApplication = (MyApplication) mContext.getApplicationContext();
+        url = myApplication.getUrlPath();
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
     }
 
     @Override
@@ -59,7 +80,11 @@ public class GuanZhuAdapter extends BaseAdapter {
         return mList.get(position).isB();
     }
 
+<<<<<<< HEAD
     public static final int TYPE_COUNT = 3;
+=======
+    public static final int TYPE_COUNT = 4;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 
     @Override
     public int getItemViewType(int position) {
@@ -71,7 +96,11 @@ public class GuanZhuAdapter extends BaseAdapter {
     @Override
     public int getViewTypeCount() {
 
+<<<<<<< HEAD
         return 3;
+=======
+        return TYPE_COUNT;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
     }
 
 
@@ -231,12 +260,18 @@ public class GuanZhuAdapter extends BaseAdapter {
                 }
 
             });
+<<<<<<< HEAD
+=======
+        }else if(getItemViewType(position) == TYPE_4) {
+            convertView = mInflater.inflate(R.layout.hhy_item_guanzhu_4, null);
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         }
         return convertView;
     }
 
     private void setDataBase(String biaozhi,int muid,int mflag) {
         //当不再关注某人时，从数据库将此人删除
+<<<<<<< HEAD
         String url = "http://10.201.1.148:8888/HttpServer/HttpServer";
         RequestParams params = new RequestParams(url);
         if("deleteMcare".equals(biaozhi)){
@@ -245,6 +280,15 @@ public class GuanZhuAdapter extends BaseAdapter {
         }else if("insertMcare".equals(biaozhi)){
             //还必须得到我的uid，一并插入，这里先假定我的uid是1（因为没有和登陆连起来，所以无法动态获得uid）
             params.addBodyParameter("insertMcare1",1+"");
+=======
+        RequestParams params = new RequestParams(url);
+        if("deleteMcare".equals(biaozhi)){
+            params.addBodyParameter("deleteMcare1", LoginUser.userid+"");
+            params.addBodyParameter("deleteMcare",muid+"");
+        }else if("insertMcare".equals(biaozhi)){
+            //还必须得到我的uid，一并插入，这里先假定我的uid是1（因为没有和登陆连起来，所以无法动态获得uid）
+            params.addBodyParameter("insertMcare1",LoginUser.userid+"");
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
             params.addBodyParameter("insertMcare",muid+"");
             params.addBodyParameter("mflag",mflag+"");
         }
@@ -272,10 +316,16 @@ public class GuanZhuAdapter extends BaseAdapter {
     }
 
     private void  selectDataBase(int myuid,int muid) {
+<<<<<<< HEAD
         String url = "http://10.201.1.148:8888/HttpServer/HttpServer";
         RequestParams params = new RequestParams(url);
         //还必须得到我的uid，一并插入，这里先假定我的uid是1（因为没有和登陆连起来，所以无法动态获得uid）
         params.addBodyParameter("userd",1+"");
+=======
+        RequestParams params = new RequestParams(url);
+        //还必须得到我的uid，一并插入，这里先假定我的uid是1（因为没有和登陆连起来，所以无法动态获得uid）
+        params.addBodyParameter("userd",LoginUser.userid+"");
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         params.addBodyParameter("fan",muid+"");
         x.http().post(params, new Callback.CommonCallback<String>() {
             @Override

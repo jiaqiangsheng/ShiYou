@@ -3,7 +3,10 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical">
+<<<<<<< HEAD
 
+=======
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
     <include
         android:id="@+id/faxianTopbar"
         layout="@layout/slide_content_topbar"/>

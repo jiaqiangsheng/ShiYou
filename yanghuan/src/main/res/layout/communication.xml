@@ -23,7 +23,11 @@
                 android:textSize="20sp"
                 android:checked="true"
                 style="@style/radio2"
+<<<<<<< HEAD
                 android:background="@drawable/yhleft"
+=======
+                android:background="@drawable/radiobackground"
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
                 android:text="动态"/>
             <RadioButton
                 android:id="@+id/btn2"
@@ -31,7 +35,11 @@
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 style="@style/radio2"
+<<<<<<< HEAD
                 android:background="@drawable/yhright"
+=======
+                android:background="@drawable/radiobackground"
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
                 android:text="资讯"
                 />
         </RadioGroup>

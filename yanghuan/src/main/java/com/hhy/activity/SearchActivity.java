@@ -3,18 +3,31 @@ package com.hhy.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
+<<<<<<< HEAD
+=======
+import android.util.Log;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+<<<<<<< HEAD
+=======
+
+import com.LoginUser;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.hhy.adapter.SearchAdapter;
 import com.hhy.bean.SearchBean;
 import com.hhy.bean.UserInfo;
 import com.hhy.receiver.SearchView;
+<<<<<<< HEAD
+=======
+import com.jqs.servert.utils.MyApplication;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 import com.yanghuan.R;
 
 import org.xutils.common.Callback;
@@ -96,6 +109,11 @@ public class SearchActivity extends Activity implements SearchView.SearchViewLis
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.hhy_activity_search);
+<<<<<<< HEAD
+=======
+        MyApplication myApplication = (MyApplication) getApplication();
+        url = myApplication.getUrlPath();
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         initViews();
         initData();
     }
@@ -116,7 +134,11 @@ public class SearchActivity extends Activity implements SearchView.SearchViewLis
         lvResults.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+<<<<<<< HEAD
                 Toast.makeText(SearchActivity.this, position + "", Toast.LENGTH_SHORT).show();
+=======
+                //Toast.makeText(SearchActivity.this, position + "", Toast.LENGTH_SHORT).show();
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
             }
         });
     }
@@ -139,7 +161,10 @@ public class SearchActivity extends Activity implements SearchView.SearchViewLis
      * 获取db 数据
      */
     private void getDbData() {
+<<<<<<< HEAD
         url = "http://10.201.1.148:8888/HttpServer/HttpServer";
+=======
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         final int size = 10;
         dbData = new ArrayList<SearchBean>(size);
         SearchBean searchBean = null;
@@ -147,7 +172,11 @@ public class SearchActivity extends Activity implements SearchView.SearchViewLis
             dbData.add(new SearchBean("123", "android开发必备技能" + (i + 1), "Android自定义view——自定义搜索view"));
         }*/
         RequestParams params = new RequestParams(url);
+<<<<<<< HEAD
         params.addQueryStringParameter("concern","1");
+=======
+        params.addQueryStringParameter("concern", LoginUser.userid+"");
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
@@ -160,7 +189,11 @@ public class SearchActivity extends Activity implements SearchView.SearchViewLis
                 for(int i = 0; i< size; i++){
                     userInfo = lists.get(i);
                     dbData.add(new SearchBean(userInfo.getUrl(),userInfo.getUname(),userInfo.getUsign()));
+<<<<<<< HEAD
                     Toast.makeText(SearchActivity.this, dbData.toString(), Toast.LENGTH_SHORT).show();
+=======
+                    //Toast.makeText(SearchActivity.this, dbData.toString(), Toast.LENGTH_SHORT).show();
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
                 }
             }
 
@@ -185,8 +218,12 @@ public class SearchActivity extends Activity implements SearchView.SearchViewLis
      * 获取热搜版data 和adapter
      */
     private void getHintData() {
+<<<<<<< HEAD
         url = "http://10.201.1.148:8888/HttpServer/HttpServer";
        /* hintData = new ArrayList<String>(hintSize);
+=======
+        /* hintData = new ArrayList<String>(hintSize);
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         for (int i = 1; i <= hintSize; i++) {
             hintData.add("热搜版" + i + "：Android自定义View");
         }
@@ -206,7 +243,11 @@ public class SearchActivity extends Activity implements SearchView.SearchViewLis
                 List<UserInfo> lists = gson.fromJson(result, type);
                 for (int i = 0; i < hintSize; i++) {
                     userInfo = lists.get(i);
+<<<<<<< HEAD
                    // Toast.makeText(SearchActivity.this, userInfo.getUname(), Toast.LENGTH_SHORT).show();
+=======
+                    //Toast.makeText(SearchActivity.this, userInfo.getUname(), Toast.LENGTH_SHORT).show();
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
                     hintData.add(userInfo.getUname());
                 }
 
@@ -226,15 +267,28 @@ public class SearchActivity extends Activity implements SearchView.SearchViewLis
             public void onFinished() {
 
             }
+<<<<<<< HEAD
         });
         hintAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, hintData);
+=======
+
+
+        });
+        hintAdapter = new ArrayAdapter<String>(SearchActivity.this, android.R.layout.simple_list_item_1, hintData);
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
     }
 
     /**
      * 获取自动补全data 和adapter
      */
     private void getAutoCompleteData(String text) {
+<<<<<<< HEAD
         if (autoCompleteData == null) {
+=======
+        //Log.e("text:",text);
+        if (autoCompleteData == null) {
+            Log.e("search","初始化");
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
             //初始化
             autoCompleteData = new ArrayList<String>(hintSize);
         } else {
@@ -243,6 +297,10 @@ public class SearchActivity extends Activity implements SearchView.SearchViewLis
             for (int i = 0, count = 0; i < dbData.size()
                     && count < hintSize; i++) {
                 if (dbData.get(i).getTitle().contains(text.trim())) {
+<<<<<<< HEAD
+=======
+                    Log.e("search",dbData.get(i).getTitle());
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
                     autoCompleteData.add(dbData.get(i).getTitle());
                     count++;
                 }
@@ -283,6 +341,10 @@ public class SearchActivity extends Activity implements SearchView.SearchViewLis
      */
     @Override
     public void onRefreshAutoComplete(String text) {
+<<<<<<< HEAD
+=======
+       // Toast.makeText(SearchActivity.this, text, Toast.LENGTH_SHORT).show();
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         //更新数据
         getAutoCompleteData(text);
     }

@@ -3,7 +3,10 @@ package com.lxx.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+<<<<<<< HEAD
 import android.util.Log;
+=======
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
@@ -14,6 +17,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+<<<<<<< HEAD
 import com.LoginUser;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -35,6 +39,17 @@ import org.xutils.http.RequestParams;
 import org.xutils.x;
 
 import java.lang.reflect.Type;
+=======
+
+import com.lxx.Adapter.FirstGradeAdapter;
+import com.lxx.Adapter.GridViewAdapter;
+import com.lxx.bean.Firstgrade_Review;
+import com.lxx.bean.Lxx_BeanContext;
+import com.lxx.bean.Secondgrade_Review;
+import com.lxx.myinterface.MyCallback;
+import com.yanghuan.R;
+
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,16 +57,24 @@ public class Dynamic_Details extends AppCompatActivity {
     boolean flag=false;//是否为回复二级评论
     int localchildposition=-1;
     int localparentposition=-1;
+<<<<<<< HEAD
 
     int Commentid;//一级评论的id
     int commentuid;//一级评论人的id
 
     List<SelectCommentBean> list;//取得到的评论集合
+=======
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
     View mScrollView;
     String userimageurl;
     String username;
     String data;
     String context;
+<<<<<<< HEAD
+=======
+    String zan;
+    String pinglun;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
     FirstGradeAdapter myFirstAdapter;
     Lxx_BeanContext contextBean;
     ImageView pinglunimag;
@@ -78,8 +101,13 @@ public class Dynamic_Details extends AppCompatActivity {
         Intent intent = getIntent();
         contextBean = (Lxx_BeanContext) intent.getSerializableExtra("list");
         initdata();
+<<<<<<< HEAD
         getJsonData();
 
+=======
+
+        listfirst.add(firstgradeReview);
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         myFirstAdapter =new FirstGradeAdapter(listfirst,Dynamic_Details.this);
         listviewfirst.setAdapter(myFirstAdapter);
         myFirstAdapter.setCallback(new MyCallback() {
@@ -101,10 +129,13 @@ public class Dynamic_Details extends AppCompatActivity {
                  sendname=listfirst.get(position).getFristUesrname();//
                  sendposition=position;
                 pingluncontext.requestFocus();
+<<<<<<< HEAD
                 Commentid=listfirst.get(position).getCid();
                 Toast.makeText(Dynamic_Details.this, "Commentid"+Commentid, Toast.LENGTH_SHORT).show();
                 commentuid=listfirst.get(position).getCuid();
                 Toast.makeText(Dynamic_Details.this, "Commentid"+commentuid, Toast.LENGTH_SHORT).show();
+=======
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
                 InputMethodManager imm = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
                 imm. toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
                 Toast.makeText(Dynamic_Details.this, ""+position, Toast.LENGTH_SHORT).show();
@@ -157,19 +188,33 @@ public class Dynamic_Details extends AppCompatActivity {
         context=contextBean.getContent();
         Toast.makeText(Dynamic_Details.this, ""+username, Toast.LENGTH_SHORT).show();
         usernametextview.setText(username);
+<<<<<<< HEAD
         datatextview.setText(data);
         contextTextview.setText(context);
 
+=======
+        secondgradeReview=new Secondgrade_Review("贾强盛","李萧萧","0.0");
+        secondlist.add(secondgradeReview);
+        datatextview.setText(data);
+        contextTextview.setText(context);
+        firstgradeReview=new Firstgrade_Review("http://img1.imgtn.bdimg.com/it/u=1819655436,1406018065&fm=21&gp=0.jpg","李萧萧","5/25/2016","正文部分，一级评论内容",secondlist);
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 
     }
 
     public void snedpinglun(View view) {
+<<<<<<< HEAD
         final String pinglunString=pingluncontext.getText().toString();
+=======
+        String pinglunString=pingluncontext.getText().toString();
+        Firstgrade_Review firstgradeReview1;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         secondlist=new ArrayList<>();
         pingluncontext.requestFocus();
         InputMethodManager imm = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
         imm. toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
         if(sendname==null && flag==false){
+<<<<<<< HEAD
             //插入一级评论
              CommentBean commentBean=new CommentBean(contextBean.getCid(), contextBean.getUseruid(),LoginUser.userid,pinglunString);
            // Log.e("李萧萧", "" + "执行" + contextBean.getCid());
@@ -206,11 +251,21 @@ public class Dynamic_Details extends AppCompatActivity {
         else if(sendname!=null&& flag==false){
             //插入二级评论的第一条评论
             secondgradeReview=new Secondgrade_Review(LoginUser.userid,Commentid,commentuid,LoginUser.username,sendname,pinglunString,0);
+=======
+            firstgradeReview1=new Firstgrade_Review("http://img1.imgtn.bdimg.com/it/u=1819655436,1406018065&fm=21&gp=0.jpg","李萧萧","5/26/2016",pinglunString,secondlist);
+            listfirst.add(firstgradeReview1);
+
+        }
+        else if(sendname!=null&& flag==false){
+            Toast.makeText(Dynamic_Details.this, "sendposition"+sendposition, Toast.LENGTH_SHORT).show();
+            secondgradeReview=new Secondgrade_Review("我",sendname,pinglunString);
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
             listfirst.get(sendposition).getSecondlist().add(secondgradeReview);
             Toast.makeText(Dynamic_Details.this, "sendposition" + listfirst.get(sendposition).getSecondlist().get(0).getSecondcontext(), Toast.LENGTH_SHORT).show();
             sendname=null;
             sendposition=-1;
 
+<<<<<<< HEAD
 
             ReplyBean replyBean=new ReplyBean(LoginUser.userid,commentuid,Commentid,pinglunString,"");
             //插入到数据库 表reply
@@ -289,6 +344,20 @@ public class Dynamic_Details extends AppCompatActivity {
 
 
         }
+=======
+        }
+        else if (flag==true){
+            secondgradeReview=new Secondgrade_Review("我","11",pinglunString);
+            listfirst.get(localparentposition).getSecondlist().add(localchildposition+1, secondgradeReview);
+            flag=false;
+        }
+       /* List<Firstgrade_Review> listfirst2=new ArrayList<>();
+        listfirst2.addAll(listfirst);
+        Toast.makeText(Dynamic_Details.this, "前"+listfirst2, Toast.LENGTH_SHORT).show();
+        myFirstAdapter.clearList();
+        Toast.makeText(Dynamic_Details.this, "后"+listfirst2, Toast.LENGTH_SHORT).show();
+        myFirstAdapter.updateList(listfirst2);*/
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         myFirstAdapter.notifyDataSetChanged();
 
 
@@ -308,6 +377,7 @@ public class Dynamic_Details extends AppCompatActivity {
         InputMethodManager imm = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
         imm. toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
         }
+<<<<<<< HEAD
     private void getJsonData() {
         list=new ArrayList<>();
         Log.e("李萧萧", "" + "执行" + contextBean.getCid());
@@ -353,5 +423,7 @@ public class Dynamic_Details extends AppCompatActivity {
         });
 
     }
+=======
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 
 }

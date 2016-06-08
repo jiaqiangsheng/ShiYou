@@ -55,7 +55,11 @@ public class Mycontext extends AppCompatActivity {
     //    imageurllist.add(imageurl);
         String contextmain="shuoshuo明若晓溪明若晓溪明若晓溪明若晓溪明若晓溪明若晓溪明若晓溪明若晓溪明若晓溪明若晓溪明若晓溪明若晓溪明若晓溪明若晓溪明若晓溪明若晓溪 ";
         int a =10;
+<<<<<<< HEAD
         contextBean =new Lxx_BeanContext(1,"fdsfasdasd","5/23","http://pic13.nipic.com/20110310/6400731_100538610118_2.jpg",imageurllist,contextmain,a,a,2);
+=======
+        contextBean =new Lxx_BeanContext("fdsfasdasd","5/23","http://pic13.nipic.com/20110310/6400731_100538610118_2.jpg",imageurllist,contextmain,a,a);
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         contextlist.add(contextBean);
         imageurllist=new ArrayList<>();
         imageurllist.add(imageurl);
@@ -69,7 +73,11 @@ public class Mycontext extends AppCompatActivity {
         imageurllist.add("http://www.yybagua.cn/uploads/allimg/141213/4-1412131ZQC25.jpg");
         imageurllist.add("http://images.china.cn/attachement/jpg/site1000/20110819/001ec949ffca0fb8413c37.jpg");
         imageurllist.add("http://images.china.cn/attachement/jpg/site1000/20110819/001ec949ffca0fb8413c37.jpg");
+<<<<<<< HEAD
         contextBean =new Lxx_BeanContext(0,"明若晓溪","5/24","http://pic13.nipic.com/20110310/6400731_100538610118_2.jpg",imageurllist,contextmain,a,a,2);
+=======
+        contextBean =new Lxx_BeanContext("明若晓溪","5/24","http://pic13.nipic.com/20110310/6400731_100538610118_2.jpg",imageurllist,contextmain,a,a);
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         contextlist.add(contextBean);
 
 

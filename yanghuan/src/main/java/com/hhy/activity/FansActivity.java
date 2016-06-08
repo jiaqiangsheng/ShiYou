@@ -10,6 +10,11 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
+<<<<<<< HEAD
+=======
+
+import com.LoginUser;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.handmark.pulltorefresh.library.ILoadingLayout;
@@ -18,6 +23,10 @@ import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.hhy.adapter.FansAdapter;
 import com.hhy.bean.Fans;
 import com.hhy.bean.UserInfo;
+<<<<<<< HEAD
+=======
+import com.jqs.servert.utils.MyApplication;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 import com.yanghuan.BuildConfig;
 import com.yanghuan.R;
 
@@ -43,8 +52,13 @@ public class FansActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hhy_activity_fans);
+<<<<<<< HEAD
         //初始化xUtils
         initXUtils();
+=======
+        MyApplication myApplication = (MyApplication) getApplication();
+        url = myApplication.getUrlPath();
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         initView();
         initData();
         //设置刷新模式，下拉刷新，上拉加载都行
@@ -56,12 +70,15 @@ public class FansActivity extends AppCompatActivity {
         //setAdapter();
 
     }
+<<<<<<< HEAD
 
     private void initXUtils() {
         x.Ext.init(getApplication());
         x.Ext.setDebug(BuildConfig.DEBUG);
     }
 
+=======
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
     private void initStatus() {
         //设置头部下拉刷新时的样式
         ILoadingLayout topLayout = mPullToRefreshListView.getLoadingLayoutProxy(true, false);
@@ -94,6 +111,16 @@ public class FansActivity extends AppCompatActivity {
                 startActivity(intent);*/
             }
         });
+<<<<<<< HEAD
+=======
+
+        mImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
     }
 
     class loadDataAsyn extends AsyncTask<Void, Void, String> {
@@ -113,7 +140,11 @@ public class FansActivity extends AppCompatActivity {
             }
             initData();
             //重新从数据库取数据，若有新数据就会被加在进来
+<<<<<<< HEAD
             Log.i("muid",mList.toString());
+=======
+            Log.i("ouid",mList.toString());
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
             return "success";
         }
 
@@ -131,25 +162,41 @@ public class FansActivity extends AppCompatActivity {
 
 
     private void initView() {
+<<<<<<< HEAD
+=======
+        mImageView = (ImageView) findViewById(R.id.hhy_fans_back);
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         mPullToRefreshListView = (PullToRefreshListView) findViewById(R.id.fans_listview);
 
     }
 
     private void initData() {
         mList = new ArrayList<Fans>();
+<<<<<<< HEAD
         mFans = new Fans(1,"http","全部关注","全部关注",R.drawable.card_icon_addattention,0);
         mList.add(mFans);
         //从数据库上获取图片时用Glide进行加载
        selectDataBase();
+=======
+        //从数据库上获取图片时用Glide进行加载
+        selectDataBase();
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 
     }
 
     private void selectDataBase() {
+<<<<<<< HEAD
         url = "http://10.201.1.148:8888/HttpServer/HttpServer";
         //查收查询数据库，取出数据
         RequestParams params = new RequestParams(url);
         //先默认为1
         params.addQueryStringParameter("userid", 1+"");
+=======
+        //查收查询数据库，取出数据
+        RequestParams params = new RequestParams(url);
+        //先默认为1
+        params.addQueryStringParameter("userid", LoginUser.userid+"");
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         params.addQueryStringParameter("fans", "fans");
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
@@ -160,6 +207,7 @@ public class FansActivity extends AppCompatActivity {
                 Type type = new TypeToken<List<UserInfo>>() {
                 }.getType();
                 List<UserInfo> lists = gson.fromJson(result, type);
+<<<<<<< HEAD
                 //Toast.makeText(GuanZhuActivity.this, lists.toString(), Toast.LENGTH_SHORT).show();
                 for (int i = 0; i < lists.size(); i++) {
                     userInfo = lists.get(i);
@@ -168,6 +216,21 @@ public class FansActivity extends AppCompatActivity {
                     //Toast.makeText(FansActivity.this, mFans.getFla()+"", Toast.LENGTH_SHORT).show();
                     mList.add(mFans);
 
+=======
+                if(lists.size() == 0){
+                    Fans fans = new Fans(1,"http","","",R.drawable.card_icon_addattention,2);
+                    mList.add(fans);
+                }else{
+                    Fans fans = new Fans(1,"http","全部关注","全部关注",R.drawable.card_icon_addattention,0);
+                    mList.add(fans);
+                    for (int i = 0; i < lists.size(); i++) {
+                        userInfo = lists.get(i);
+                        Toast.makeText(FansActivity.this, userInfo.getFlag1()+"", Toast.LENGTH_SHORT).show();
+                        mFans = new Fans(userInfo.getUid(),userInfo.getUrl(),userInfo.getUname(),userInfo.getUsign(),userInfo.getFlag1(),1);
+                        //Toast.makeText(FansActivity.this, mFans.getFla()+"", Toast.LENGTH_SHORT).show();
+                        mList.add(mFans);
+                    }
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
                 }
                 setAdapter();
             }

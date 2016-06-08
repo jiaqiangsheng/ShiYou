@@ -13,6 +13,10 @@
         android:layout_width="match_parent"
         android:layout_height="50dp">
         <ImageView
+<<<<<<< HEAD
+=======
+            android:id="@+id/hhy_fans_back"
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_centerVertical="true"

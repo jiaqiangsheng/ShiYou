@@ -1,8 +1,12 @@
 package com.lxx.bean;
 
+<<<<<<< HEAD
 import java.io.Serializable;
 
 public class User implements Serializable {
+=======
+public class User {
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 	private int uid;
 	private String upicture;
 	private String name;

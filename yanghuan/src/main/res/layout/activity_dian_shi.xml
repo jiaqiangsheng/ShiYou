@@ -9,14 +9,22 @@
        android:id="@+id/activity_linear"
        android:layout_width="match_parent"
        android:layout_height="50dp"
+<<<<<<< HEAD
        android:background="@color/background_white">
+=======
+       android:background="@color/aquamarine">
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
        <ImageView
            android:id="@+id/activity_dian_back"
            android:layout_width="40dp"
            android:layout_height="40dp"
            android:layout_gravity="center"
            android:src="@mipmap/back"
+<<<<<<< HEAD
            android:background="@color/aquamarine"/>
+=======
+          />
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
    </LinearLayout>
     <com.handmark.pulltorefresh.library.PullToRefreshListView
         android:id="@+id/activity_listview"

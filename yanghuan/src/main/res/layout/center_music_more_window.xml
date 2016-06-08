@@ -6,6 +6,10 @@
     android:background="#90FFFFFF"
     android:gravity="bottom|center_horizontal" >
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
     <TextView
         android:id="@+id/more_window_local"
         android:layout_width="wrap_content"
@@ -15,7 +19,11 @@
         android:drawableTop="@mipmap/tabbar_compose_idea"
         android:gravity="center_horizontal"
         android:paddingBottom="@dimen/more_window_item_margin"
+<<<<<<< HEAD
         android:text="文字" />
+=======
+        android:text="发帖" />
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 
     <TextView
         android:id="@+id/more_window_online"
@@ -27,7 +35,11 @@
         android:drawableTop="@mipmap/tabbar_compose_photo"
         android:gravity="center_horizontal"
         android:paddingBottom="@dimen/more_window_item_margin"
+<<<<<<< HEAD
         android:text="相册"/>
+=======
+        android:text="签到"/>
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 
     <TextView
         android:id="@+id/more_window_delete"
@@ -38,32 +50,53 @@
         android:drawableTop="@mipmap/tabbar_compose_camera"
         android:gravity="center_horizontal"
         android:paddingBottom="@dimen/more_window_item_margin"
+<<<<<<< HEAD
         android:text="拍摄"/>
 
     <TextView
+=======
+        android:text="私信"/>
+
+    <!--<TextView
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         android:id="@+id/more_window_collect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/more_window_local"
         android:layout_marginRight="30dip"
         android:clickable="true"
+<<<<<<< HEAD
         android:drawableTop="@mipmap/tabbar_compose_lbs"
         android:gravity="center_horizontal"
         android:paddingBottom="@dimen/more_window_item_margin"
         android:text="签到"/>
 
+=======
+        android:gravity="center_horizontal"
+        android:paddingBottom="@dimen/more_window_item_margin"
+        />
+-->
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
     <TextView
         android:id="@+id/more_window_auto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/more_window_online"
         android:layout_marginRight="30dip"
+<<<<<<< HEAD
         android:layout_toRightOf="@+id/more_window_collect"
+=======
+       android:layout_marginLeft="50dp"
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         android:clickable="true"
         android:drawableTop="@mipmap/tabbar_compose_review"
         android:gravity="center_horizontal"
         android:paddingBottom="@dimen/more_window_item_margin"
+<<<<<<< HEAD
         android:text="点评"/>
+=======
+        android:text="最近"/>
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 
     <TextView
         android:id="@+id/more_window_external"
@@ -75,16 +108,27 @@
         android:drawableTop="@mipmap/tabbar_compose_more"
         android:gravity="center_horizontal"
         android:paddingBottom="@dimen/more_window_item_margin"
+<<<<<<< HEAD
         android:text="更多"/>
+=======
+        android:text="积分"/>
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 
     <ImageView
         android:id="@+id/center_music_window_close"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_below="@+id/more_window_auto"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="78dip"
         android:layout_toRightOf="@+id/more_window_collect"
         android:src="@mipmap/tabbar_compose_background_icon_close" />
+=======
+        android:src="@mipmap/tabbar_compose_background_icon_close"
+        android:layout_below="@id/more_window_online"
+     android:layout_marginTop="50dp"
+        android:layout_toStartOf="@+id/more_window_external" />
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 
 </RelativeLayout>

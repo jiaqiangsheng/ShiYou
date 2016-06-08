@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <merger version="3"><dataSet config="main"><source path="E:\1project\git\Shiyou\library\assets"/></dataSet><dataSet config="release"><source path="E:\1project\git\Shiyou\library\src\release\assets"/></dataSet></merger>
+=======
+<merger version="3"><dataSet config="main"><source path="G:\Android-Project\Shiyou\library\assets"/></dataSet><dataSet config="release"><source path="G:\Android-Project\Shiyou\library\src\release\assets"/></dataSet></merger>
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa

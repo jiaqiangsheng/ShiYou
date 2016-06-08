@@ -8,8 +8,16 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+<<<<<<< HEAD
 import com.bumptech.glide.Glide;
 import com.hhy.bean.Fans;
+=======
+
+import com.LoginUser;
+import com.bumptech.glide.Glide;
+import com.hhy.bean.Fans;
+import com.jqs.servert.utils.MyApplication;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 import com.yanghuan.R;
 
 
@@ -24,14 +32,25 @@ import java.util.List;
  * Created by hanhongyang on 2016/5/16.
  */
 public class FansAdapter extends BaseAdapter {
+<<<<<<< HEAD
     public static final int TYPE_COUNT = 2;
     public static final int TYPE_1 = 0;
     public static final int TYPE_2 = 1;
+=======
+    public static final int TYPE_COUNT = 3;
+    public static final int TYPE_1 = 0;
+    public static final int TYPE_2 = 1;
+    public static final int TYPE_3 = 2;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
     List<Fans> mList;
     private List<ViewHolder2> holders = new ArrayList<ViewHolder2>();//用于存放不同item行的viewHoder
     Context mContext;
     LayoutInflater mInflater;
     //boolean flag = false;
+<<<<<<< HEAD
+=======
+    String url;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 
     ImageView mImageView;
     ViewHolder1 viewHolder1;
@@ -41,6 +60,11 @@ public class FansAdapter extends BaseAdapter {
         mList = list;
         mContext = context;
         mInflater = LayoutInflater.from(mContext);
+<<<<<<< HEAD
+=======
+        MyApplication myApplication = (MyApplication) mContext.getApplicationContext();
+        url = myApplication.getUrlPath();
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
     }
 
     @Override
@@ -146,11 +170,17 @@ public class FansAdapter extends BaseAdapter {
                 }
 
             });
+<<<<<<< HEAD
+=======
+        }else if (getItemViewType(position) == TYPE_3){
+            convertView = mInflater.inflate(R.layout.hhy_item_fans3, null);
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         }
         return convertView;
     }
 
     private void insertDataBase(int ouid) {
+<<<<<<< HEAD
 
         String url = "http://10.201.1.148:8888/HttpServer/HttpServer";
         RequestParams params = new RequestParams(url);
@@ -158,6 +188,12 @@ public class FansAdapter extends BaseAdapter {
         //还必须得到我的uid，一并插入，这里先假定我的uid是1（
         // 因为没有和登陆连起来，所以无法动态获得uid）
         params.addBodyParameter("userId", 1 + "");
+=======
+        RequestParams params = new RequestParams(url);
+        //还必须得到我的uid，一并插入，这里先假定我的uid是1（
+        // 因为没有和登陆连起来，所以无法动态获得uid）
+        params.addBodyParameter("userId", LoginUser.userid+ "");
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         params.addBodyParameter("insertOcare", ouid + "");
 
         x.http().post(params, new Callback.CommonCallback<String>() {
@@ -185,10 +221,15 @@ public class FansAdapter extends BaseAdapter {
     }
 
     private void insertDataBase2(int ouid) {
+<<<<<<< HEAD
 
         String url = "http://10.201.1.148:8888/HttpServer/HttpServer";
         RequestParams params = new RequestParams(url);
         params.addBodyParameter("useId", 1 + "");
+=======
+        RequestParams params = new RequestParams(url);
+        params.addBodyParameter("useId", LoginUser.userid+ "");
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         params.addBodyParameter("insertmcare", ouid + "");
         x.http().post(params, new Callback.CommonCallback<String>() {
             @Override

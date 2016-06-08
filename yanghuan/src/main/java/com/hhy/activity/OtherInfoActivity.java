@@ -10,12 +10,21 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+<<<<<<< HEAD
+=======
+
+import com.LoginUser;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.gson.Gson;
 import com.hhy.adapter.OtherInfoAdapter;
 import com.hhy.bean.OtherInfoBean;
 import com.hhy.bean.UserInfo;
+<<<<<<< HEAD
+=======
+import com.jqs.servert.utils.MyApplication;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 import com.yanghuan.BuildConfig;
 import com.yanghuan.R;
 
@@ -44,18 +53,26 @@ public class OtherInfoActivity extends AppCompatActivity implements View.OnClick
         // Fresco初始化
         Fresco.initialize(OtherInfoActivity.this);
         setContentView(R.layout.hhy_activity_other_info);
+<<<<<<< HEAD
         //初始化xUtils
         initXUtils();
+=======
+        MyApplication myApplication = (MyApplication) getApplication();
+        url = myApplication.getUrlPath();
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         initView();
         initData();
 
     }
+<<<<<<< HEAD
 
     private void initXUtils() {
         x.Ext.init(getApplication());
         x.Ext.setDebug(BuildConfig.DEBUG);
     }
 
+=======
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
     private void initView() {
         mListView = (ListView) findViewById(R.id.otherinfo_listview);
         mUserInfoList = new ArrayList<OtherInfoBean>();
@@ -78,7 +95,10 @@ public class OtherInfoActivity extends AppCompatActivity implements View.OnClick
     }
 
     private void initData() {
+<<<<<<< HEAD
         url = "http://10.201.1.148:8888/HttpServer/HttpServer";
+=======
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         mIntent = getIntent();
         uid = mIntent.getStringExtra("uid");
         selectDataBase();
@@ -93,7 +113,12 @@ public class OtherInfoActivity extends AppCompatActivity implements View.OnClick
             //根据uid查询出他人的信息
             params.addBodyParameter("otherinfo",uid);
             //登陆人的uid待完善
+<<<<<<< HEAD
             params.addBodyParameter("MyUid2", 1+"");
+=======
+            /*params.addBodyParameter("MyUid2", 1+"");*/
+            params.addBodyParameter("MyUid2", LoginUser.userid+"");
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         }
         x.http().post(params, new Callback.CommonCallback<String>() {
             @Override
@@ -179,11 +204,19 @@ public class OtherInfoActivity extends AppCompatActivity implements View.OnClick
 
     private void insertDataBase(String uid) {
         //向关注表中通过uid添加数据
+<<<<<<< HEAD
         String url = "http://10.201.1.148:8888/HttpServer/HttpServer";
         //查收查询数据库，取出数据
         RequestParams params = new RequestParams(url);
         //当前登陆人的uid,先假设都为1，以后从登陆上取得//待完善
         params.addBodyParameter("MyUid", 1+"");
+=======
+        //查收查询数据库，取出数据
+        RequestParams params = new RequestParams(url);
+        //当前登陆人的uid,先假设都为1，以后从登陆上取得//待完善
+       /* params.addBodyParameter("MyUid", 1+"");*/
+        params.addBodyParameter("MyUid", LoginUser.userid+"");
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         //当前登陆人要关注的人的uid
         params.addBodyParameter("insertMcareByUid",uid);
         x.http().post(params, new Callback.CommonCallback<String>() {

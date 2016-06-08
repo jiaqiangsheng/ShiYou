@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+<<<<<<< HEAD
+=======
+import com.jqs.servert.utils.MyApplication;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 import com.yanghuan.R;
 
 import org.xutils.common.Callback;
@@ -27,6 +31,11 @@ public class MessageActivity extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hhy_activity_message);
+<<<<<<< HEAD
+=======
+        MyApplication myApplication = (MyApplication) getApplication();
+        mPath = myApplication.getUrlPath();
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         initView();
 
     }
@@ -144,7 +153,10 @@ public class MessageActivity extends AppCompatActivity implements View.OnClickLi
         //POST请求
         //第一步：设置访问路径以及携带数据
         if (flag) {
+<<<<<<< HEAD
             mPath = "http://10.201.1.148:8888/HttpServer/HttpServer";
+=======
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
             RequestParams params = new RequestParams(mPath);
             params.addBodyParameter("biaozhi", biaozhi);
             //代表相关按钮被打开，可以发送通知了

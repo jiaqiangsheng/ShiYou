@@ -19,10 +19,13 @@ import com.lxx.myinterface.MyCallback;
 import com.lxx.myview.MyListView;
 import com.yanghuan.R;
 
+<<<<<<< HEAD
 import org.xutils.common.util.DensityUtil;
 import org.xutils.image.ImageOptions;
 import org.xutils.x;
 
+=======
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 import java.util.List;
 
 /**
@@ -110,7 +113,10 @@ public class FirstGradeAdapter extends BaseAdapter {
         viewHolder.username.setText(firstgradeReview.getFristUesrname());
         viewHolder.contex.setText(firstgradeReview.getFirstContext());
         viewHolder.date.setText(firstgradeReview.getFirstdate());
+<<<<<<< HEAD
         downLoadImage(viewHolder.imageView,firstgradeReview.getFeisturlUserImage());
+=======
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
        // list_second.setAdapter(null);//每次对子listview进行清空，否则会复用上次的listview
 
         list_second.setAdapter(new SecondGradeAdapter(firstgradeReview.getSecondlist(), context));
@@ -127,6 +133,7 @@ public class FirstGradeAdapter extends BaseAdapter {
 
         return convertView;
     }
+<<<<<<< HEAD
     public  void  downLoadImage( ImageView imageView,String url){
         ImageOptions imageOptions = new ImageOptions.Builder()
                 .setSize(DensityUtil.dip2px(120), DensityUtil.dip2px(120))
@@ -150,4 +157,6 @@ public class FirstGradeAdapter extends BaseAdapter {
                 .build();
         x.image().bind(imageView, url, imageOptions);
     }
+=======
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 }

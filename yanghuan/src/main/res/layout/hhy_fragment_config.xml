@@ -11,6 +11,10 @@
         android:layout_height="40dp"
         android:background="@color/shaiXuan">
         <ImageView
+<<<<<<< HEAD
+=======
+            android:id="@+id/hhy_config_back"
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_centerVertical="true"

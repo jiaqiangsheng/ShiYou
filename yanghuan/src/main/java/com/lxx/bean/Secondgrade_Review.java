@@ -6,6 +6,7 @@ import java.io.Serializable;
  * Created by 潇 on 2016/5/25.
  */
 public class Secondgrade_Review implements Serializable {
+<<<<<<< HEAD
     int ruid;//回复人的id
     int rqid;//发表评论人的id
     int rcid;//评论id,区分哪条评论
@@ -54,6 +55,16 @@ public class Secondgrade_Review implements Serializable {
 
     public void setRcid(int rcid) {
         this.rcid = rcid;
+=======
+    String username1;
+    String usetname2;
+    String secondcontext;
+
+    public Secondgrade_Review(String username1, String usetname2, String secondcontext) {
+        this.username1 = username1;
+        this.usetname2 = usetname2;
+        this.secondcontext = secondcontext;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
     }
 
     public String getUsername1() {
@@ -79,6 +90,10 @@ public class Secondgrade_Review implements Serializable {
     public void setSecondcontext(String secondcontext) {
         this.secondcontext = secondcontext;
     }
+<<<<<<< HEAD
 
     String secondcontext;
 }
+=======
+}
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa

@@ -1,8 +1,12 @@
 package com.lxx.bean;
 
+<<<<<<< HEAD
 import java.io.Serializable;
 
 public class UserInfo implements Serializable {
+=======
+public class UserInfo {
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 
 	public int getUserPhoto() {
 		return userPhoto;

@@ -12,6 +12,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+<<<<<<< HEAD
+=======
+import android.widget.ImageView;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -37,7 +41,11 @@ public class ConfigFragment extends Fragment {
     AdviceFragment mAdviceFragment;
     hhy_EditionFragment mEditionFragment;
     AlertDialog.Builder dialog;
+<<<<<<< HEAD
 
+=======
+    ImageView mImageView;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 
     @Nullable
     @Override
@@ -63,7 +71,11 @@ public class ConfigFragment extends Fragment {
 
     private void initView(View view) {
         mListView = (ListView) view.findViewById(R.id.config_listview);
+<<<<<<< HEAD
 
+=======
+        mImageView = (ImageView) view.findViewById(R.id.hhy_config_back);
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         mFragmentManager = getFragmentManager();
         mFragmentTransaction = mFragmentManager.beginTransaction();
         //为每一个item添加点击事件

@@ -7,6 +7,7 @@ import java.util.List;
  * Created by 潇 on 2016/5/24.
  */
 public class Lxx_BeanContext implements Serializable {
+<<<<<<< HEAD
     int cid;//说说id
     String user;
     int useruid;//评论人id
@@ -27,6 +28,9 @@ public class Lxx_BeanContext implements Serializable {
         this.cid = cid;
     }
 
+=======
+    String user;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
     String date;
 
     public String getUserpicture() {
@@ -91,8 +95,12 @@ public class Lxx_BeanContext implements Serializable {
         this.pinglun = pinglun;
     }
 
+<<<<<<< HEAD
     public Lxx_BeanContext(int cid,String user, String date, String userpicture, List<String> stringImage, String content, int zan, int pinglun,int useruid) {
         this.cid=cid;
+=======
+    public Lxx_BeanContext(String user, String date, String userpicture, List<String> stringImage, String content, int zan, int pinglun) {
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         this.user = user;
         this.date = date;
         this.userpicture = userpicture;
@@ -100,6 +108,9 @@ public class Lxx_BeanContext implements Serializable {
         this.content = content;
         this.zan = zan;
         this.pinglun = pinglun;
+<<<<<<< HEAD
         this.useruid=useruid;
+=======
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
     }
 }

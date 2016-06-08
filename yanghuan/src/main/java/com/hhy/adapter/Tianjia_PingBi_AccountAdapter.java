@@ -8,8 +8,15 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
+<<<<<<< HEAD
 import com.hhy.bean.ImageViewDemo;
 import com.hhy.bean.UserInfo;
+=======
+import com.LoginUser;
+import com.hhy.bean.ImageViewDemo;
+import com.hhy.bean.UserInfo;
+import com.jqs.servert.utils.MyApplication;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 import com.yanghuan.R;
 
 import org.xutils.common.Callback;
@@ -26,13 +33,22 @@ public class Tianjia_PingBi_AccountAdapter extends BaseAdapter {
     Context mContext;
     LayoutInflater mInflater;
     String mbiaozhi;
+<<<<<<< HEAD
+=======
+    String url;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
     //biaozhi:判断是pingbiFragment还是pingbiNotSeeFragment
     public Tianjia_PingBi_AccountAdapter(List<UserInfo> list, Context context,String biaozhi) {
         mList = list;
         mContext = context;
         mbiaozhi = biaozhi;
         mInflater = LayoutInflater.from(mContext);
+<<<<<<< HEAD
 
+=======
+        MyApplication myApplication = (MyApplication) mContext.getApplicationContext();
+        url = myApplication.getUrlPath();
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
     }
 
     @Override
@@ -87,9 +103,15 @@ public class Tianjia_PingBi_AccountAdapter extends BaseAdapter {
     }
 
     private void setDtaBase(int uid) {
+<<<<<<< HEAD
         String url = "http://10.201.1.148:8888/HttpServer/HttpServer";
         RequestParams params = new RequestParams(url);
         params.addQueryStringParameter("myuid", 1+"");
+=======
+        RequestParams params = new RequestParams(url);
+       /* params.addQueryStringParameter("myuid", 1+"");*/
+        params.addQueryStringParameter("myuid", LoginUser.userid+"");
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         if ("pingbita".equals(mbiaozhi)) {
             params.addQueryStringParameter("deleteMstop", uid + "");
         } else if ("notsee".equals(mbiaozhi)) {

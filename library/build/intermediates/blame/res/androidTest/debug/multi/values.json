@@ -1,6 +1,10 @@
 [
     {
+<<<<<<< HEAD
         "outputFile": "D:\\new\\aa\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\values\\values.xml",
+=======
+        "outputFile": "G:\\Android-Project\\Shiyou\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\values\\values.xml",
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         "map": [
             {
                 "to": {
@@ -11,7 +15,11 @@
                     "endOffset": 999
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "D:\\new\\aa\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+=======
+                    "file": "G:\\Android-Project\\Shiyou\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -24,7 +32,11 @@
         ]
     },
     {
+<<<<<<< HEAD
         "outputFile": "E:\\1project\\git\\Shiyou\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\values\\values.xml",
+=======
+        "outputFile": "D:\\new\\aa\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\values\\values.xml",
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         "map": [
             {
                 "to": {
@@ -35,7 +47,11 @@
                     "endOffset": 999
                 },
                 "from": {
+<<<<<<< HEAD
                     "file": "E:\\1project\\git\\Shiyou\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+=======
+                    "file": "D:\\new\\aa\\library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,

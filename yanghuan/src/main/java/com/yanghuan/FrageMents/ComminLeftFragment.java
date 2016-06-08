@@ -84,7 +84,11 @@ public class ComminLeftFragment extends Fragment {
                     imageurllist = new ArrayList<>();
                     imageurllist.addAll(dynamic.getImageListString());
                     User user = dynamic.getUser();
+<<<<<<< HEAD
                     contextBean = new Lxx_BeanContext(dynamic.getFid(),user.getName(), dynamic.getFdata(), user.getUpicture(), imageurllist, dynamic.getFcontext(), imageurllist.size(), imageurllist.size(),dynamic.getUser().getUid());
+=======
+                    contextBean = new Lxx_BeanContext(user.getName(), dynamic.getFdata(), user.getUpicture(), imageurllist, dynamic.getFcontext(), imageurllist.size(), imageurllist.size());
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
                     contextlist.add(contextBean);
                     adapter.notifyDataSetChanged();
                     Log.e("李萧萧", "" + user.getName());
@@ -115,6 +119,15 @@ public class ComminLeftFragment extends Fragment {
     private void initData() {
         contextlist=new ArrayList<>();
         imageurllist=new ArrayList<>();
+<<<<<<< HEAD
 
+=======
+        String imageurl="http://img3.imgtn.bdimg.com/it/u=895009738,1542646259&fm=21&gp=0.jpg";
+        //    imageurllist.add(imageurl);
+        String contextmain="shuoshuo明若晓溪明若晓溪明若晓溪明若晓溪明若晓溪明若晓溪明若晓溪明若晓溪明若晓溪明若晓溪明若晓溪明若晓溪明若晓溪明若晓溪明若晓溪明若晓溪 ";
+        int a =10;
+        contextBean =new Lxx_BeanContext("fdsfasdasd","5/23","http://pic13.nipic.com/20110310/6400731_100538610118_2.jpg",imageurllist,contextmain,a,a);
+        contextlist.add(contextBean);
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
     }
 }

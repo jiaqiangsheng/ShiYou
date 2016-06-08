@@ -11,6 +11,10 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+<<<<<<< HEAD
+=======
+import android.widget.ImageView;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -52,7 +56,12 @@ public class ShiYouActivity extends AppCompatActivity implements View.OnClickLis
     SlidingMenu menu;
     View  v=getCurrentFocus();
     Intent mIntent;
+<<<<<<< HEAD
     TextView guanzhuview,bottomView1, bottomView2, bottomView3, bottomView4, bottomView5, bottomView6;
+=======
+    ImageView mTouXiangImage;
+    TextView guanzhuview,fansview,bottomView1, bottomView2, bottomView3, bottomView4, bottomView5, bottomView6;
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
 
 
 
@@ -75,6 +84,11 @@ public class ShiYouActivity extends AppCompatActivity implements View.OnClickLis
 
     }
     private void initMenuviews() {
+<<<<<<< HEAD
+=======
+        mTouXiangImage = (ImageView) findViewById(R.id.slidingmenu_aboveImageView);
+        fansview = (TextView) findViewById(R.id.slidinemenu_middleTextView22);
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         guanzhuview = (TextView) findViewById(R.id.slidingmenu_middleTextView12);
         bottomView1= (TextView) findViewById(R.id.slidingmenu_bottomTextView1);
         bottomView2= (TextView) findViewById(R.id.slidingmenu_bottomTextView2);
@@ -86,6 +100,11 @@ public class ShiYouActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private void addMenuListeners() {
+<<<<<<< HEAD
+=======
+        mTouXiangImage.setOnClickListener(this);
+        fansview.setOnClickListener(this);
+>>>>>>> cfe8914d43a90acdaef7a5d7a1c8ac04c5b8befa
         guanzhuview.setOnClickListener(this);
         bottomView1.setOnClickListener(this);
         bottomView2.setOnClickListener(this);
